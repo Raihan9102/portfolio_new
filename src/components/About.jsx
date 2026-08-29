@@ -1,148 +1,160 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const About = () => {
-  const stats = [
-    { label: "Semester", value: "8", icon: "📚" },
-    { label: "Focus Areas", value: "2", icon: "🎯" },
-    { label: "Projects", value: "2", icon: "💼" },
-    { label: "Tech Stack", value: "12+", icon: "⚡" },
+  const { t } = useLanguage();
+  const a = t.about;
+
+  const pillarIcons = ["👁️", "📡", "💻", "📊"];
+  const pillarTags = [
+    ["YOLOv8n", "ByteTrack", "Raspberry Pi 5", "PyTorch"],
+    ["ESP32", "Arduino", "C++", "Sensors", "Blynk.io"],
+    ["React.js", "Flutter", "Tailwind CSS", "REST API"],
+    ["Looker Studio", "AppSheet", "Project Management", "SQL"],
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
-    <section id="about" className="relative py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="relative py-20 px-4 sm:px-6 bg-white/70 border-y border-slate-200/80">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-mono text-blue-700 font-semibold mb-3">
+            {a.badge}
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+            {a.title} <span className="gradient-blue-text">{a.titleSpan}</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Get to know more about my background and expertise
+          <p className="text-slate-600 max-w-2xl mx-auto mt-3 text-sm sm:text-base">
+            {a.subtitle}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Text Content */}
+        {/* Profile Story & Education Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+          {/* Main Profile Story */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-4"
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-7 bg-white rounded-2xl p-7 sm:p-9 border border-slate-200 shadow-sm relative overflow-hidden"
           >
-            <p className="text-lg text-gray-300 leading-relaxed">
-              I'm a{" "}
-              <span className="text-purple-400 font-semibold">
-                Telecommunication Engineering
-              </span>{" "}
-              student in my final year with a deep passion for technology and
-              innovation.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              My journey in tech has led me to explore two fascinating domains:{" "}
-              <span className="text-blue-400 font-semibold">
-                Web Development
-              </span>
-              , where I create responsive and interactive user experiences, and{" "}
-              <span className="text-pink-400 font-semibold">
-                Internet of Things (IoT)
-              </span>
-              , where I bridge the physical and digital worlds.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              I'm continuously learning and improving my skills, always eager to
-              take on new challenges and collaborate on innovative projects that
-              make a real-world impact.
-            </p>
+            <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-full blur-2xl"></div>
+            <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+              {a.profileTitle}
+            </h3>
+
+            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+              <p>{a.story1}</p>
+              <p>{a.story2}</p>
+              <p className="text-slate-600">{a.story3}</p>
+            </div>
+
+            {/* Quick Contact Tags */}
+            <div className="mt-6 pt-6 border-t border-slate-100 flex flex-wrap gap-4 text-xs font-mono text-slate-600 font-medium">
+              <div className="flex items-center gap-2">
+                <span className="text-blue-600">📍</span> Bandung, Indonesia
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-blue-600">📧</span> raihan.rahmat2019@gmail.com
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-blue-600">📞</span> +6282246269033
+              </div>
+            </div>
           </motion.div>
 
-          {/* Stats Cards */}
+          {/* Education & Soft Skills Card */}
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-5 space-y-6"
           >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="glass-effect rounded-2xl p-6 text-center hover:bg-white/10 transition-all cursor-pointer"
-              >
-                <div className="text-4xl mb-3">{stat.icon}</div>
-                <div className="text-3xl font-bold mb-2 gradient-text">
-                  {stat.value}
+            {/* Education Card */}
+            <div className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <span className="text-[11px] font-mono text-blue-600 uppercase tracking-wider block mb-1 font-bold">
+                    {a.higherEdu}
+                  </span>
+                  <h4 className="text-lg font-bold text-slate-900">Telkom University</h4>
+                  <p className="text-slate-600 text-sm mt-0.5 font-medium">{a.eduDegree}</p>
                 </div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
-              </motion.div>
-            ))}
+                <span className="px-3 py-1 rounded-lg bg-blue-50 text-blue-700 text-xs font-mono font-bold border border-blue-200">
+                  {a.eduPeriod}
+                </span>
+              </div>
+              <p className="text-slate-600 text-xs leading-relaxed">{a.eduDesc}</p>
+            </div>
+
+            {/* Soft Skills Badges */}
+            <div className="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm">
+              <h4 className="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <span className="text-blue-600">✨</span> {a.softSkillsTitle}
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {a.softSkills.map((skill, idx) => (
+                  <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <div className="text-xs font-bold text-slate-800">{skill.name}</div>
+                    <div className="text-[11px] text-slate-500 mt-0.5">{skill.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
 
-        {/* Value Proposition */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass-effect rounded-2xl p-8 md:p-12"
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center">
-            What I Bring to the Table
+        {/* 4 Core Competency Pillars */}
+        <div>
+          <h3 className="text-xl font-bold text-slate-900 text-center mb-8">
+            {a.pillarsTitle}
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-4xl mb-3">🚀</div>
-              <h4 className="font-semibold text-lg mb-2">Fast Learner</h4>
-              <p className="text-gray-400 text-sm">
-                Quick to adapt and master new technologies
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">💡</div>
-              <h4 className="font-semibold text-lg mb-2">Problem Solver</h4>
-              <p className="text-gray-400 text-sm">
-                Creative solutions to complex challenges
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🤝</div>
-              <h4 className="font-semibold text-lg mb-2">Team Player</h4>
-              <p className="text-gray-400 text-sm">
-                Collaborative mindset and strong communication
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {a.pillars.map((comp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm glass-card-hover flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-2xl mb-4 text-blue-600">
+                    {pillarIcons[index]}
+                  </div>
+                  <h4 className="text-base font-bold text-slate-900 mb-2">
+                    {comp.title}
+                  </h4>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                    {comp.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-100">
+                  {pillarTags[index].map((tag, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className="px-2 py-0.5 rounded bg-blue-50 text-blue-700 text-[11px] font-mono font-semibold border border-blue-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

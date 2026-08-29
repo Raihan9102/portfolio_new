@@ -3,51 +3,60 @@ import { motion } from "framer-motion";
 
 const BackgroundBlobs = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
-      {/* Blob 1 */}
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 bg-[#f8fafc]">
+      {/* Subtle clean tech grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.035]" 
+        style={{
+          backgroundImage: `radial-gradient(#2563eb 1px, transparent 1px)`,
+          backgroundSize: '28px 28px'
+        }}
+      />
+
+      {/* Top Left Soft Blue Ambient Glow */}
       <motion.div
-        className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
-        style={{ top: "10%", left: "10%" }}
+        className="absolute w-[550px] h-[550px] bg-blue-400/10 rounded-full blur-[130px]"
+        style={{ top: "-10%", left: "-10%" }}
         animate={{
-          x: [0, 50, 0],
-          y: [0, -30, 0],
-          scale: [1, 1.2, 1],
+          x: [0, 30, 0],
+          y: [0, 25, 0],
+          scale: [1, 1.05, 1],
         }}
         transition={{
-          duration: 8,
+          duration: 12,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       />
 
-      {/* Blob 2 */}
+      {/* Right Tech Soft Sky Ambient Glow */}
       <motion.div
-        className="absolute w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
-        style={{ top: "50%", right: "10%" }}
+        className="absolute w-[500px] h-[500px] bg-sky-300/15 rounded-full blur-[140px]"
+        style={{ top: "30%", right: "-10%" }}
         animate={{
-          x: [0, -40, 0],
-          y: [0, 40, 0],
-          scale: [1, 1.1, 1],
+          x: [0, -30, 0],
+          y: [0, 30, 0],
+          scale: [1, 1.08, 1],
         }}
         transition={{
-          duration: 10,
+          duration: 14,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 1,
         }}
       />
 
-      {/* Blob 3 */}
+      {/* Bottom Subtle Soft Blue Glow */}
       <motion.div
-        className="absolute w-72 h-72 bg-pink-500/20 rounded-full blur-3xl"
-        style={{ bottom: "10%", left: "40%" }}
+        className="absolute w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-[150px]"
+        style={{ bottom: "-10%", left: "20%" }}
         animate={{
-          x: [0, 30, 0],
-          y: [0, -40, 0],
-          scale: [1, 1.15, 1],
+          x: [0, 20, 0],
+          y: [0, -20, 0],
+          scale: [1, 1.05, 1],
         }}
         transition={{
-          duration: 9,
+          duration: 15,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 2,
