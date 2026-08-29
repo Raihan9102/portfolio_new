@@ -61,7 +61,7 @@ const About = () => {
             {/* Quick Contact Tags */}
             <div className="mt-6 pt-6 border-t border-slate-100 flex flex-wrap gap-4 text-xs font-mono text-slate-600 font-medium">
               <div className="flex items-center gap-2">
-                <span className="text-blue-600">📍</span> Bandung, Indonesia
+                <span className="text-blue-600">📍</span> Bekasi, Indonesia
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-blue-600">📧</span> raihan.rahmat2019@gmail.com

@@ -58,7 +58,7 @@ const AppContent = () => {
             </p>
           </div>
           <div className="flex items-center gap-6 text-xs text-slate-600 font-mono font-medium">
-            <span>Bandung, Indonesia</span>
+            <span>Bekasi, Indonesia</span>
             <span>•</span>
             <a href="mailto:raihan.rahmat2019@gmail.com" className="text-blue-600 hover:underline font-semibold">
               raihan.rahmat2019@gmail.com
