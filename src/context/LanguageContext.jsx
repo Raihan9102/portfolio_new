@@ -270,7 +270,7 @@ export const translations = {
     },
     // Skills
     skills: {
-      badge: "TECHNICAL REPERTOIRE",
+      badge: "TECH STACK & TOOLS",
       title: "Skills &",
       titleSpan: "Expertise",
       subtitle: "Structured overview of technical stacks, engineering tools, and programming languages honed through academic research, Capstone Design, and industry practice.",
@@ -622,7 +622,7 @@ export const translations = {
     },
     // Skills
     skills: {
-      badge: "REPERTOAR TEKNIS",
+      badge: "KEAHLIAN & TEKNOLOGI",
       title: "Keahlian &",
       titleSpan: "Spesialisasi",
       subtitle: "Ikhtisar terstruktur teknologi, alat rekayasa, dan bahasa pemrograman yang diasah melalui riset akademik, proyek Capstone Design, dan praktik industri.",
