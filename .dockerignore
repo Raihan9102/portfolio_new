@@ -4,4 +4,4 @@ dist
 .gitignore
 .env*
 Dockerfile
-.dockerignore
+.dockerignorecoverage

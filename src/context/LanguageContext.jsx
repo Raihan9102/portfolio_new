@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const LanguageContext = createContext();
 
@@ -21,7 +21,8 @@ export const translations = {
       status: "Open for Opportunities",
       academic: "🎓 S1 Telecommunications Engineering",
       greeting: "Hi, I'm",
-      specialization: "Internet of Things (IoT) • Front-End Development • Deep Learning",
+      specialization:
+        "Internet of Things (IoT) • Front-End Development • Deep Learning",
       bio1: "Telecommunications Engineering graduate from Telkom University with strong interests in Internet of Things (IoT), Front-End Development, and Deep Learning.",
       bio2: "Gained practical experience through laboratory assistantship and industry internships at PT LEN Industri and HUMIC Engineering. Adaptable, a collaborative team player, and ready to contribute professionally to the technology industry.",
       viewExperience: "View Experience & Work",
@@ -29,9 +30,15 @@ export const translations = {
       getInTouch: "Get in Touch →",
       stats: {
         internships: { label: "Industry Internships", sub: "PT LEN & HUMIC" },
-        projects: { label: "Featured Projects", sub: "Edge AI • IoT • Web • Data" },
+        projects: {
+          label: "Featured Projects",
+          sub: "Edge AI • IoT • Web • Data",
+        },
         certs: { label: "Certifications", sub: "DeepLearning.AI & Dicoding" },
-        specializations: { label: "Specializations", sub: "IoT • Front-End • Deep Learning" },
+        specializations: {
+          label: "Specializations",
+          sub: "IoT • Front-End • Deep Learning",
+        },
       },
     },
     // About
@@ -39,39 +46,60 @@ export const translations = {
       badge: "BACKGROUND & PROFILE",
       title: "About",
       titleSpan: "Me",
-      subtitle: "Telecommunications Engineering graduate with practical experience in IoT systems, Front-End engineering, and Deep Learning research.",
+      subtitle:
+        "Telecommunications Engineering graduate with practical experience in IoT systems, Front-End engineering, and Deep Learning research.",
       profileTitle: "Professional Profile",
-      story1: "Telecommunications Engineering graduate from Telkom University with strong interests in Internet of Things (IoT), Front-End Development, and Deep Learning.",
-      story2: "Gained practical experience through laboratory assistantship at MBC Laboratory and industry internships at PT LEN Industri and HUMIC Engineering.",
-      story3: "Adaptable, a collaborative team player, and ready to contribute professionally to the technology industry.",
+      story1:
+        "Telecommunications Engineering graduate from Telkom University with strong interests in Internet of Things (IoT), Front-End Development, and Deep Learning.",
+      story2:
+        "Gained practical experience through laboratory assistantship at MBC Laboratory and industry internships at PT LEN Industri and HUMIC Engineering.",
+      story3:
+        "Adaptable, a collaborative team player, and ready to contribute professionally to the technology industry.",
       higherEdu: "Higher Education",
       eduDegree: "S1 Telecommunications Engineering",
       eduPeriod: "2022 - 2026",
-      eduDesc: "Focused on digital signal processing, embedded systems, network fundamentals, telecommunications systems, and artificial intelligence integration.",
+      eduDesc:
+        "Focused on digital signal processing, embedded systems, network fundamentals, telecommunications systems, and artificial intelligence integration.",
       softSkillsTitle: "Core Soft Skills",
       softSkills: [
-        { name: "Time Management", desc: "Structured deadline execution & sprint tracking" },
-        { name: "Discipline", desc: "Detail-oriented research and code standards" },
-        { name: "Adaptability", desc: "Rapid adoption of emerging tech stacks" },
-        { name: "Teamwork", desc: "Proven cross-functional lab & team coordination" },
+        {
+          name: "Time Management",
+          desc: "Structured deadline execution & sprint tracking",
+        },
+        {
+          name: "Discipline",
+          desc: "Detail-oriented research and code standards",
+        },
+        {
+          name: "Adaptability",
+          desc: "Rapid adoption of emerging tech stacks",
+        },
+        {
+          name: "Teamwork",
+          desc: "Proven cross-functional lab & team coordination",
+        },
       ],
       pillarsTitle: "Areas of Expertise",
       pillars: [
         {
           title: "Deep Learning & Computer Vision",
-          description: "PyTorch architectures (CNN, BiLSTM-MHA), YOLOv8 object detection, ByteTrack MOT, Wav2Vec 2.0 audio feature fusion & Explainable AI (SHAP).",
+          description:
+            "PyTorch architectures (CNN, BiLSTM-MHA), YOLOv8 object detection, ByteTrack MOT, Wav2Vec 2.0 audio feature fusion & Explainable AI (SHAP).",
         },
         {
           title: "Internet of Things (IoT)",
-          description: "ESP32 & Arduino development with multi-sensor integration (Ultrasonic, Tilt, Buzzer) and Blynk.io cloud telemetry.",
+          description:
+            "ESP32 & Arduino development with multi-sensor integration (Ultrasonic, Tilt, Buzzer) and Blynk.io cloud telemetry.",
         },
         {
           title: "Front-End & Mobile Development",
-          description: "Modern interactive web platforms using React.js, JavaScript, and CSS/Tailwind, and cross-platform mobile apps with Flutter.",
+          description:
+            "Modern interactive web platforms using React.js, JavaScript, and CSS/Tailwind, and cross-platform mobile apps with Flutter.",
         },
         {
           title: "Data Analytics & Engineering Tools",
-          description: "Enterprise project monitoring dashboards, budget oversight with Looker Studio & AppSheet, and Cisco Packet Tracer network configuration.",
+          description:
+            "Enterprise project monitoring dashboards, budget oversight with Looker Studio & AppSheet, and Cisco Packet Tracer network configuration.",
         },
       ],
     },
@@ -80,7 +108,8 @@ export const translations = {
       badge: "CAREER & LEADERSHIP TIMELINE",
       title: "Work & Organizational",
       titleSpan: "Experience",
-      subtitle: "Proven track record in industrial engineering internships, deep learning research, laboratory instruction, and student leadership.",
+      subtitle:
+        "Proven track record in industrial engineering internships, deep learning research, laboratory instruction, and student leadership.",
       tabWork: "💼 Work Experience",
       tabOrg: "🏛️ Organizational & Lab",
       workList: [
@@ -95,9 +124,16 @@ export const translations = {
             "Integrated self-supervised pre-trained representations (Wav2Vec 2.0 768-dim embeddings) with Mel-Spectrograms and 120-dim MFCCs into a multi-modal deep feature fusion head.",
             "Mitigated severe class imbalance (2.3:1 ratio) through custom AdamW optimization, ReduceLROnPlateau scheduling, 0.4 dropout regularization, and weighted Cross-Entropy Loss penalties.",
             "Engineered Explainable AI (XAI) attribution pipelines leveraging SHAP GradientExplainer directly on CNN fusion layers to interpret spectral-temporal audio feature attributions for clinical transparency.",
-            "Co-authored an IEEE-formatted research paper: \"A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection\".",
+            'Co-authored an IEEE-formatted research paper: "A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection".',
           ],
-          tags: ["PyTorch", "Wav2Vec 2.0", "BiLSTM-MHA", "SHAP XAI", "Audio Processing", "IEEE Paper"],
+          tags: [
+            "PyTorch",
+            "Wav2Vec 2.0",
+            "BiLSTM-MHA",
+            "SHAP XAI",
+            "Audio Processing",
+            "IEEE Paper",
+          ],
         },
         {
           role: "Project Management Officer, Internship",
@@ -110,7 +146,13 @@ export const translations = {
             "Utilized AppSheet and Looker to optimize project management processes during the internship period.",
             "Prepared various project documents required for management reporting.",
           ],
-          tags: ["Google Looker Studio", "AppSheet", "Project Management", "Budget Oversight", "Process Optimization"],
+          tags: [
+            "Google Looker Studio",
+            "AppSheet",
+            "Project Management",
+            "Budget Oversight",
+            "Process Optimization",
+          ],
         },
       ],
       orgList: [
@@ -126,7 +168,12 @@ export const translations = {
             "Installing and configuring the necessary software to support the smooth running of practical activities.",
             "Managing the physical maintenance of the laboratory, including workbench layout and cable management, to ensure that the practical area remains safe and conducive.",
           ],
-          tags: ["Teaching & Practicum", "Module Development", "Software Configuration", "Lab Maintenance"],
+          tags: [
+            "Teaching & Practicum",
+            "Module Development",
+            "Software Configuration",
+            "Lab Maintenance",
+          ],
         },
         {
           role: "Public Relations Division",
@@ -138,7 +185,11 @@ export const translations = {
             "Acting as a member who serves as the main communication bridge through intensive coordination between laboratories within the Faculty of Electrical Engineering.",
             "Ensuring the smooth flow of information between the organizers and laboratory assistants in order to minimize technical obstacles during the event.",
           ],
-          tags: ["Cross-Lab Coordination", "Event PR", "Stakeholder Communication"],
+          tags: [
+            "Cross-Lab Coordination",
+            "Event PR",
+            "Stakeholder Communication",
+          ],
         },
         {
           role: "Public Relations Division",
@@ -152,7 +203,12 @@ export const translations = {
             "Managed internal team communication to ensure that activity schedules and presentation materials were delivered effectively and on time.",
             "Achievements: Successfully reached and increased the enthusiasm of high school students in Bekasi in learning about Telkom University's education programs through measurable outreach activities.",
           ],
-          tags: ["Education Roadshow", "Public Relations", "Team Communication", "Strategic Partnerships"],
+          tags: [
+            "Education Roadshow",
+            "Public Relations",
+            "Team Communication",
+            "Strategic Partnerships",
+          ],
         },
       ],
     },
@@ -161,7 +217,8 @@ export const translations = {
       badge: "TECHNICAL PORTFOLIO",
       title: "Featured",
       titleSpan: "Projects",
-      subtitle: "Showcase of engineering projects spanning Computer Vision & Edge AI, IoT hardware systems, web applications, and enterprise dashboards.",
+      subtitle:
+        "Showcase of engineering projects spanning Computer Vision & Edge AI, IoT hardware systems, web applications, and enterprise dashboards.",
       filters: {
         All: "All Projects",
         AI: "🧠 Deep Learning & AI",
@@ -180,13 +237,17 @@ export const translations = {
       list: [
         {
           id: 1,
-          title: "A Computer Vision-Based Human Monitoring and Counting System Using YOLOv8n and ByteTrack",
-          subtitle: "Edge AI People Counting & Occupancy System (Capstone Design)",
+          title:
+            "A Computer Vision-Based Human Monitoring and Counting System Using YOLOv8n and ByteTrack",
+          subtitle:
+            "Edge AI People Counting & Occupancy System (Capstone Design)",
           category: "Computer Vision & Edge AI",
           tagCategory: "AI",
           period: "Feb 2026 - Aug 2026",
-          description: "Developed an edge AI human detection and counting system deployed on a Raspberry Pi 5 without personal identity recognition for user privacy.",
-          fullDescription: "Developed an edge AI human detection and counting system deployed on a Raspberry Pi 5 without personal identity recognition for user privacy. Implemented YOLOv8n fine-tuned on a custom dataset (5,130 images, 81.41% mAP@0.5, 82.17% precision) and integrated ByteTrack with virtual line-crossing logic to prevent double-counting. Built an asynchronous dual-path distribution to Firebase Realtime Database and created the Detectra mobile app using Flutter for live monitoring, achieving 90.23% overall testing accuracy.",
+          description:
+            "Developed an edge AI human detection and counting system deployed on a Raspberry Pi 5 without personal identity recognition for user privacy.",
+          fullDescription:
+            "Developed an edge AI human detection and counting system deployed on a Raspberry Pi 5 without personal identity recognition for user privacy. Implemented YOLOv8n fine-tuned on a custom dataset (5,130 images, 81.41% mAP@0.5, 82.17% precision) and integrated ByteTrack with virtual line-crossing logic to prevent double-counting. Built an asynchronous dual-path distribution to Firebase Realtime Database and created the Detectra mobile app using Flutter for live monitoring, achieving 90.23% overall testing accuracy.",
           features: [
             "Edge AI Object Detection & Tracking (YOLOv8n + ByteTrack Multi-Object Tracking)",
             "Two-Way Virtual Line-Crossing Centroid Counting Logic to Prevent Double-Counting",
@@ -204,8 +265,10 @@ export const translations = {
           category: "AI & Deep Learning",
           tagCategory: "AI",
           period: "Apr 2026 - July 2026",
-          description: "Designed PyTorch Deep Learning architectures (Multi-Branch CNN & BiLSTM-MHA) with Wav2Vec 2.0 fusion and Explainable AI (SHAP) for clinical depression detection.",
-          fullDescription: "Designed and implemented PyTorch Deep Learning architectures (Multi-Branch 1D/2D CNN & BiLSTM-MHA) for speech-based depression detection using the DAIC-WOZ dataset (189 participants) under strict participant-level 5-Fold Stratified Cross-Validation. Integrated self-supervised pre-trained representations (Wav2Vec 2.0 768-dim embeddings) with Mel-Spectrograms and 120-dim MFCCs into a multi-modal deep feature fusion head. Mitigated severe class imbalance (2.3:1 ratio) through custom AdamW optimization, ReduceLROnPlateau scheduling, 0.4 dropout regularization, and weighted Cross-Entropy Loss penalties. Engineered Explainable AI (XAI) attribution pipelines leveraging SHAP GradientExplainer directly on CNN fusion layers. Co-authored an IEEE-formatted research paper: 'A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection'.",
+          description:
+            "Designed PyTorch Deep Learning architectures (Multi-Branch CNN & BiLSTM-MHA) with Wav2Vec 2.0 fusion and Explainable AI (SHAP) for clinical depression detection.",
+          fullDescription:
+            "Designed and implemented PyTorch Deep Learning architectures (Multi-Branch 1D/2D CNN & BiLSTM-MHA) for speech-based depression detection using the DAIC-WOZ dataset (189 participants) under strict participant-level 5-Fold Stratified Cross-Validation. Integrated self-supervised pre-trained representations (Wav2Vec 2.0 768-dim embeddings) with Mel-Spectrograms and 120-dim MFCCs into a multi-modal deep feature fusion head. Mitigated severe class imbalance (2.3:1 ratio) through custom AdamW optimization, ReduceLROnPlateau scheduling, 0.4 dropout regularization, and weighted Cross-Entropy Loss penalties. Engineered Explainable AI (XAI) attribution pipelines leveraging SHAP GradientExplainer directly on CNN fusion layers. Co-authored an IEEE-formatted research paper: 'A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection'.",
           features: [
             "Multi-Branch 1D/2D CNN & BiLSTM-MHA Deep Learning Architecture in PyTorch",
             "Integrated Pre-Trained Wav2Vec 2.0 (768-dim) with Mel-Spectrograms & MFCCs (120-dim)",
@@ -223,8 +286,10 @@ export const translations = {
           category: "IoT & Hardware",
           tagCategory: "IoT",
           period: "Mar 2025 - Jun 2025",
-          description: "Designed a navigation aid for the visually impaired using an ESP32 microcontroller, ultrasonic sensors, tilt sensor, buzzer alarm, and Blynk.io platform.",
-          fullDescription: "Designed a navigation aid for the visually impaired using an ESP32 microcontroller to enhance user safety and mobility. Integrated ultrasonic sensors for obstacle detection, a tilt sensor for balance monitoring, and a buzzer alarm system. Developed device logic using C++ and integrated it with the Blynk.io platform for monitoring functionality.",
+          description:
+            "Designed a navigation aid for the visually impaired using an ESP32 microcontroller, ultrasonic sensors, tilt sensor, buzzer alarm, and Blynk.io platform.",
+          fullDescription:
+            "Designed a navigation aid for the visually impaired using an ESP32 microcontroller to enhance user safety and mobility. Integrated ultrasonic sensors for obstacle detection, a tilt sensor for balance monitoring, and a buzzer alarm system. Developed device logic using C++ and integrated it with the Blynk.io platform for monitoring functionality.",
           features: [
             "Navigation Aid for Visually Impaired to Enhance User Safety and Mobility",
             "ESP32 Microcontroller Embedded Processing & Logic in C++",
@@ -242,8 +307,10 @@ export const translations = {
           category: "Web Development",
           tagCategory: "Web",
           period: "Mar 2025 - Jun 2025",
-          description: "Built a cryptocurrency information platform providing real-time data on coin names, market values, descriptions, and price history using React.js.",
-          fullDescription: "Built a cryptocurrency information platform providing real-time data on coin names, market values, descriptions, and price history. Led the front-end development using React.js, JavaScript, and CSS. Designed and implemented a responsive user interface to present data for the top 50 coins informatively.",
+          description:
+            "Built a cryptocurrency information platform providing real-time data on coin names, market values, descriptions, and price history using React.js.",
+          fullDescription:
+            "Built a cryptocurrency information platform providing real-time data on coin names, market values, descriptions, and price history. Led the front-end development using React.js, JavaScript, and CSS. Designed and implemented a responsive user interface to present data for the top 50 coins informatively.",
           features: [
             "Real-Time Data on Coin Names, Market Values, Descriptions, and Price History",
             "Led Front-End Development Using React.js, JavaScript, and CSS",
@@ -260,8 +327,10 @@ export const translations = {
           category: "Data & Dashboard",
           tagCategory: "Data",
           period: "Jun 2025 - Sept 2025",
-          description: "Developed dynamic project dashboards using Google Looker Studio and AppSheet for real-time project monitoring with a focus on budget oversight at PT LEN Industri.",
-          fullDescription: "Developed and managed project dashboards using Google Looker Studio for dynamic, real-time project monitoring with a focus on budget oversight at PT LEN Industri (Persero). Utilized AppSheet and Looker to optimize project management processes during the internship period. Prepared various project documents required for management reporting.",
+          description:
+            "Developed dynamic project dashboards using Google Looker Studio and AppSheet for real-time project monitoring with a focus on budget oversight at PT LEN Industri.",
+          fullDescription:
+            "Developed and managed project dashboards using Google Looker Studio for dynamic, real-time project monitoring with a focus on budget oversight at PT LEN Industri (Persero). Utilized AppSheet and Looker to optimize project management processes during the internship period. Prepared various project documents required for management reporting.",
           features: [
             "Dynamic Real-Time Project Dashboards in Google Looker Studio",
             "Focused Budget Oversight, Resource Tracking & Milestone Analytics",
@@ -277,49 +346,58 @@ export const translations = {
       badge: "TECH STACK & HARD SKILLS",
       title: "Hard Skills &",
       titleSpan: "Expertise",
-      subtitle: "Comprehensive overview of technical capabilities, programming languages, and tools from academic education, research, and industry experience.",
+      subtitle:
+        "Comprehensive overview of technical capabilities, programming languages, and tools from academic education, research, and industry experience.",
     },
     // Certifications
     certs: {
       badge: "VERIFIED CREDENTIALS",
       title: "Licenses &",
       titleSpan: "Certifications",
-      subtitle: "Professional certifications and recognized credentials in Deep Learning, Artificial Intelligence, Python, Data Science, and SQL.",
+      subtitle:
+        "Professional certifications and recognized credentials in Deep Learning, Artificial Intelligence, Python, Data Science, and SQL.",
       list: [
         {
           title: "Deep Learning",
           issuer: "DeepLearning.AI",
           issueDate: "Aug 2026",
           validity: "Aug 2026",
-          description: "Comprehensive neural network architectures, multi-layer optimization, hyperparameter tuning, and deep learning engineering.",
+          description:
+            "Comprehensive neural network architectures, multi-layer optimization, hyperparameter tuning, and deep learning engineering.",
         },
         {
           title: "Learn the Basics of AI (Belajar Dasar AI)",
           issuer: "Dicoding Indonesia",
           issueDate: "Nov 2024",
           validity: "Nov 2024 - Nov 2027",
-          description: "Foundational principles of Artificial Intelligence, Machine Learning workflows, and intelligent system implementations.",
+          description:
+            "Foundational principles of Artificial Intelligence, Machine Learning workflows, and intelligent system implementations.",
         },
         {
-          title: "Getting Started with Python Programming (Memulai Pemrograman dengan Python)",
+          title:
+            "Getting Started with Python Programming (Memulai Pemrograman dengan Python)",
           issuer: "Dicoding Indonesia",
           issueDate: "Nov 2024",
           validity: "Nov 2024 - Nov 2027",
-          description: "Python language syntax, functional constructs, object-oriented programming (OOP), and structured data handling.",
+          description:
+            "Python language syntax, functional constructs, object-oriented programming (OOP), and structured data handling.",
         },
         {
-          title: "Learn the Basics of Data Science (Belajar Dasar Data Science)",
+          title:
+            "Learn the Basics of Data Science (Belajar Dasar Data Science)",
           issuer: "Dicoding Indonesia",
           issueDate: "Oct 2024",
           validity: "Oct 2024 - Oct 2027",
-          description: "Data exploration, statistical analysis, feature engineering, data preprocessing, and analytical problem-solving.",
+          description:
+            "Data exploration, statistical analysis, feature engineering, data preprocessing, and analytical problem-solving.",
         },
         {
           title: "Learn the Basics of Structured Query Language (SQL)",
           issuer: "Dicoding Indonesia",
           issueDate: "Oct 2024",
           validity: "Oct 2024 - Oct 2027",
-          description: "Relational database architecture, data manipulation queries, aggregation functions, and database design fundamentals.",
+          description:
+            "Relational database architecture, data manipulation queries, aggregation functions, and database design fundamentals.",
         },
       ],
     },
@@ -328,7 +406,8 @@ export const translations = {
       badge: "COMMUNICATION & INQUIRY",
       title: "Get In",
       titleSpan: "Touch",
-      subtitle: "Open to engineering positions, technical collaborations, and research discussions. Feel free to send a message.",
+      subtitle:
+        "Open to engineering positions, technical collaborations, and research discussions. Feel free to send a message.",
       infoTitle: "Contact Information",
       emailLabel: "Email Address",
       phoneLabel: "WhatsApp / Direct Phone",
@@ -338,7 +417,8 @@ export const translations = {
       affilVal: "S1 Telecommunications Engineering, Telkom University",
       socialTitle: "Professional Networks",
       formTitle: "Send a Direct Message",
-      formSubtitle: "Fill in the form below and I will respond to your inquiry promptly.",
+      formSubtitle:
+        "Fill in the form below and I will respond to your inquiry promptly.",
       nameLabel: "Your Full Name *",
       emailInputLabel: "Email Address *",
       subjectLabel: "Subject / Discussion Topic *",
@@ -350,7 +430,8 @@ export const translations = {
       sendBtn: "Send Message",
       sending: "Sending Message...",
       successMsg: "✓ Thank you! Your message has been sent successfully.",
-      errorMsg: "✕ Failed to send message. Please reach out directly via email or WhatsApp.",
+      errorMsg:
+        "✕ Failed to send message. Please reach out directly via email or WhatsApp.",
     },
     // Footer
     footer: {
@@ -377,7 +458,8 @@ export const translations = {
       status: "Terbuka untuk Peluang Kerja",
       academic: "🎓 S1 Teknik Telekomunikasi - Telkom University",
       greeting: "Halo, Saya",
-      specialization: "Internet of Things (IoT) • Front-End Development • Deep Learning",
+      specialization:
+        "Internet of Things (IoT) • Front-End Development • Deep Learning",
       bio1: "Lulusan S1 Teknik Telekomunikasi dari Telkom University dengan minat mendalam pada Internet of Things (IoT), Front-End Development, dan Deep Learning.",
       bio2: "Memperoleh pengalaman praktis melalui asisten laboratorium serta magang industri di PT LEN Industri dan HUMIC Engineering. Adaptif, komunikatif dalam kerja tim, dan siap berkontribusi secara profesional di industri teknologi.",
       viewExperience: "Lihat Pengalaman & Karya",
@@ -385,9 +467,15 @@ export const translations = {
       getInTouch: "Hubungi Saya →",
       stats: {
         internships: { label: "Magang Industri", sub: "PT LEN & HUMIC" },
-        projects: { label: "Proyek Unggulan", sub: "Edge AI • IoT • Web • Data" },
+        projects: {
+          label: "Proyek Unggulan",
+          sub: "Edge AI • IoT • Web • Data",
+        },
         certs: { label: "Sertifikasi", sub: "DeepLearning.AI & Dicoding" },
-        specializations: { label: "Bidang Fokus", sub: "IoT • Front-End • Deep Learning" },
+        specializations: {
+          label: "Bidang Fokus",
+          sub: "IoT • Front-End • Deep Learning",
+        },
       },
     },
     // About
@@ -395,39 +483,60 @@ export const translations = {
       badge: "LATAR BELAKANG & PROFIL",
       title: "Tentang",
       titleSpan: "Saya",
-      subtitle: "Lulusan Teknik Telekomunikasi dengan pengalaman praktis dalam sistem IoT, rekayasa Front-End, dan riset Deep Learning.",
+      subtitle:
+        "Lulusan Teknik Telekomunikasi dengan pengalaman praktis dalam sistem IoT, rekayasa Front-End, dan riset Deep Learning.",
       profileTitle: "Profil Profesional",
-      story1: "Lulusan S1 Teknik Telekomunikasi dari Telkom University dengan minat mendalam pada Internet of Things (IoT), Front-End Development, dan Deep Learning.",
-      story2: "Memperoleh pengalaman praktis melalui asisten laboratorium di MBC Laboratory serta magang industri di PT LEN Industri dan HUMIC Engineering.",
-      story3: "Adaptif, komunikatif dalam kerja tim, dan siap berkontribusi secara profesional di industri teknologi.",
+      story1:
+        "Lulusan S1 Teknik Telekomunikasi dari Telkom University dengan minat mendalam pada Internet of Things (IoT), Front-End Development, dan Deep Learning.",
+      story2:
+        "Memperoleh pengalaman praktis melalui asisten laboratorium di MBC Laboratory serta magang industri di PT LEN Industri dan HUMIC Engineering.",
+      story3:
+        "Adaptif, komunikatif dalam kerja tim, dan siap berkontribusi secara profesional di industri teknologi.",
       higherEdu: "Pendidikan Tinggi",
       eduDegree: "S1 Teknik Telekomunikasi",
       eduPeriod: "2022 - 2026",
-      eduDesc: "Fokus pada pengolahan sinyal digital, sistem tertanam (embedded systems), dasar jaringan telekomunikasi, dan integrasi kecerdasan buatan.",
+      eduDesc:
+        "Fokus pada pengolahan sinyal digital, sistem tertanam (embedded systems), dasar jaringan telekomunikasi, dan integrasi kecerdasan buatan.",
       softSkillsTitle: "Soft Skills Utama",
       softSkills: [
-        { name: "Time Management", desc: "Manajemen waktu terstruktur & eksekusi deadline" },
-        { name: "Discipline", desc: "Disiplin tinggi pada standar riset dan kode" },
-        { name: "Adaptability", desc: "Kemampuan adaptasi cepat dengan teknologi baru" },
-        { name: "Teamwork", desc: "Kerja sama tim dan koordinasi lintas laboratorium" },
+        {
+          name: "Time Management",
+          desc: "Manajemen waktu terstruktur & eksekusi deadline",
+        },
+        {
+          name: "Discipline",
+          desc: "Disiplin tinggi pada standar riset dan kode",
+        },
+        {
+          name: "Adaptability",
+          desc: "Kemampuan adaptasi cepat dengan teknologi baru",
+        },
+        {
+          name: "Teamwork",
+          desc: "Kerja sama tim dan koordinasi lintas laboratorium",
+        },
       ],
       pillarsTitle: "Bidang Keahlian Utama",
       pillars: [
         {
           title: "Deep Learning & Computer Vision",
-          description: "Arsitektur PyTorch (CNN, BiLSTM-MHA), deteksi objek YOLOv8, pelacakan ByteTrack MOT, fusi fitur audio Wav2Vec 2.0 & Explainable AI (SHAP).",
+          description:
+            "Arsitektur PyTorch (CNN, BiLSTM-MHA), deteksi objek YOLOv8, pelacakan ByteTrack MOT, fusi fitur audio Wav2Vec 2.0 & Explainable AI (SHAP).",
         },
         {
           title: "Internet of Things (IoT)",
-          description: "Pengembangan mikrokontroler Arduino & ESP32, integrasi multi-sensor (Ultrasonik, Kemiringan/Tilt, Buzzer) dan telemetri platform Blynk.io.",
+          description:
+            "Pengembangan mikrokontroler Arduino & ESP32, integrasi multi-sensor (Ultrasonik, Kemiringan/Tilt, Buzzer) dan telemetri platform Blynk.io.",
         },
         {
           title: "Front-End & Mobile Development",
-          description: "Aplikasi web modern interaktif berbasis React.js, JavaScript, dan CSS/Tailwind, serta aplikasi mobile monitoring berbasis Flutter.",
+          description:
+            "Aplikasi web modern interaktif berbasis React.js, JavaScript, dan CSS/Tailwind, serta aplikasi mobile monitoring berbasis Flutter.",
         },
         {
           title: "Data Analytics & Engineering Tools",
-          description: "Dashboard dinamis Looker Studio & AppSheet untuk pengawasan anggaran proyek, kueri database SQL, dan konfigurasi jaringan Cisco Packet Tracer.",
+          description:
+            "Dashboard dinamis Looker Studio & AppSheet untuk pengawasan anggaran proyek, kueri database SQL, dan konfigurasi jaringan Cisco Packet Tracer.",
         },
       ],
     },
@@ -436,7 +545,8 @@ export const translations = {
       badge: "LINIMASA KARIR & KEPEMIMPINAN",
       title: "Pengalaman Kerja &",
       titleSpan: "Organisasi",
-      subtitle: "Rekam jejak terbukti dalam magang rekayasa industri, riset deep learning, instruktur laboratorium, dan kepemimpinan kemahasiswaan.",
+      subtitle:
+        "Rekam jejak terbukti dalam magang rekayasa industri, riset deep learning, instruktur laboratorium, dan kepemimpinan kemahasiswaan.",
       tabWork: "💼 Pengalaman Kerja",
       tabOrg: "🏛️ Organisasi & Asisten Lab",
       workList: [
@@ -451,9 +561,16 @@ export const translations = {
             "Mengintegrasikan representasi self-supervised pre-trained (Wav2Vec 2.0 embedding 768 dimensi) dengan Mel-Spectrogram dan MFCC 120 dimensi ke dalam multi-modal deep feature fusion head.",
             "Mengatasi ketidakseimbangan kelas ekstrem (rasio 2.3:1) melalui custom optimizer AdamW, penjadwalan ReduceLROnPlateau, regularisasi dropout 0.4, dan penalti weighted Cross-Entropy Loss.",
             "Membangun pipeline Explainable AI (XAI) memanfaatkan SHAP GradientExplainer langsung pada lapisan fusi CNN untuk transparansi klinis atribusi fitur audio spektral-temporal.",
-            "Menulis bersama (co-author) makalah riset berformat IEEE: \"A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection\".",
+            'Menulis bersama (co-author) makalah riset berformat IEEE: "A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection".',
           ],
-          tags: ["PyTorch", "Wav2Vec 2.0", "BiLSTM-MHA", "SHAP XAI", "Audio Processing", "IEEE Paper"],
+          tags: [
+            "PyTorch",
+            "Wav2Vec 2.0",
+            "BiLSTM-MHA",
+            "SHAP XAI",
+            "Audio Processing",
+            "IEEE Paper",
+          ],
         },
         {
           role: "Project Management Officer, Internship",
@@ -466,7 +583,13 @@ export const translations = {
             "Memanfaatkan AppSheet dan Looker untuk mengoptimalkan proses manajemen proyek selama masa magang.",
             "Menyiapkan berbagai dokumen proyek yang dibutuhkan untuk pelaporan manajemen eksekutif.",
           ],
-          tags: ["Google Looker Studio", "AppSheet", "Project Management", "Budget Oversight", "Process Optimization"],
+          tags: [
+            "Google Looker Studio",
+            "AppSheet",
+            "Project Management",
+            "Budget Oversight",
+            "Process Optimization",
+          ],
         },
       ],
       orgList: [
@@ -482,7 +605,12 @@ export const translations = {
             "Menginstal dan mengonfigurasi perangkat lunak yang diperlukan untuk kelancaran kegiatan praktikum.",
             "Mengelola pemeliharaan fisik laboratorium, tata letak workbench, dan manajemen kabel untuk memastikan area praktikum tetap aman dan kondusif.",
           ],
-          tags: ["Pengajaran & Praktikum", "Penyusunan Modul", "Konfigurasi Software", "Pemeliharaan Lab"],
+          tags: [
+            "Pengajaran & Praktikum",
+            "Penyusunan Modul",
+            "Konfigurasi Software",
+            "Pemeliharaan Lab",
+          ],
         },
         {
           role: "Public Relations Division",
@@ -494,7 +622,11 @@ export const translations = {
             "Bertindak sebagai anggota yang menjadi jembatan komunikasi utama melalui koordinasi intensif antar laboratorium di lingkungan Fakultas Teknik Elektro.",
             "Memastikan kelancaran arus informasi antara panitia penyelenggara dan asisten laboratorium guna meminimalkan kendala teknis selama acara.",
           ],
-          tags: ["Koordinasi Antar Lab", "Humas Acara", "Komunikasi Stakeholder"],
+          tags: [
+            "Koordinasi Antar Lab",
+            "Humas Acara",
+            "Komunikasi Stakeholder",
+          ],
         },
         {
           role: "Public Relations Division",
@@ -508,7 +640,12 @@ export const translations = {
             "Mengelola komunikasi internal tim untuk memastikan jadwal kegiatan dan materi presentasi tersampaikan secara efektif dan tepat waktu.",
             "Pencapaian (Achievements): Berhasil menjangkau dan meningkatkan antusiasme siswa SMA di Bekasi dalam mengenal program pendidikan Telkom University melalui kegiatan sosialisasi yang terukur.",
           ],
-          tags: ["Education Roadshow", "Hubungan Masyarakat", "Komunikasi Tim", "Kemitraan Strategis"],
+          tags: [
+            "Education Roadshow",
+            "Hubungan Masyarakat",
+            "Komunikasi Tim",
+            "Kemitraan Strategis",
+          ],
         },
       ],
     },
@@ -517,7 +654,8 @@ export const translations = {
       badge: "PORTOFOLIO TEKNIS",
       title: "Proyek",
       titleSpan: "Unggulan",
-      subtitle: "Koleksi proyek rekayasa yang mencakup Computer Vision & Edge AI, sistem perangkat keras IoT, aplikasi web, dan dashboard manajemen proyek.",
+      subtitle:
+        "Koleksi proyek rekayasa yang mencakup Computer Vision & Edge AI, sistem perangkat keras IoT, aplikasi web, dan dashboard manajemen proyek.",
       filters: {
         All: "Semua Proyek",
         AI: "🧠 Deep Learning & AI",
@@ -536,13 +674,17 @@ export const translations = {
       list: [
         {
           id: 1,
-          title: "A Computer Vision-Based Human Monitoring and Counting System Using YOLOv8n and ByteTrack",
-          subtitle: "Sistem Pemantauan & Penghitung Manusia Edge AI (Capstone Design)",
+          title:
+            "A Computer Vision-Based Human Monitoring and Counting System Using YOLOv8n and ByteTrack",
+          subtitle:
+            "Sistem Pemantauan & Penghitung Manusia Edge AI (Capstone Design)",
           category: "Computer Vision & Edge AI",
           tagCategory: "AI",
           period: "Feb 2026 - Aug 2026",
-          description: "Mengembangkan sistem edge AI deteksi dan penghitungan manusia yang dideploy pada Raspberry Pi 5 tanpa pengenalan identitas pribadi untuk menjaga privasi pengguna.",
-          fullDescription: "Mengembangkan sistem edge AI deteksi dan penghitungan manusia yang dideploy pada Raspberry Pi 5 tanpa pengenalan identitas pribadi untuk menjaga privasi pengguna. Mengimplementasikan YOLOv8n hasil fine-tuning pada custom dataset (5.130 citra, 81,41% mAP@0.5, 82,17% presisi) dan mengintegrasikan ByteTrack dengan logika virtual line-crossing untuk mencegah double-counting. Membangun distribusi data dua jalur asinkron ke Firebase Realtime Database dan aplikasi mobile Detectra menggunakan Flutter untuk live monitoring, dengan akurasi pengujian sistem keseluruhan 90,23%.",
+          description:
+            "Mengembangkan sistem edge AI deteksi dan penghitungan manusia yang dideploy pada Raspberry Pi 5 tanpa pengenalan identitas pribadi untuk menjaga privasi pengguna.",
+          fullDescription:
+            "Mengembangkan sistem edge AI deteksi dan penghitungan manusia yang dideploy pada Raspberry Pi 5 tanpa pengenalan identitas pribadi untuk menjaga privasi pengguna. Mengimplementasikan YOLOv8n hasil fine-tuning pada custom dataset (5.130 citra, 81,41% mAP@0.5, 82,17% presisi) dan mengintegrasikan ByteTrack dengan logika virtual line-crossing untuk mencegah double-counting. Membangun distribusi data dua jalur asinkron ke Firebase Realtime Database dan aplikasi mobile Detectra menggunakan Flutter untuk live monitoring, dengan akurasi pengujian sistem keseluruhan 90,23%.",
           features: [
             "Deteksi & Pelacakan Objek Edge AI (YOLOv8n + Pelacakan Multi-Objek ByteTrack)",
             "Logika Penghitungan Centroid Virtual Line-Crossing Dua Arah untuk Mencegah Double-Counting",
@@ -560,8 +702,10 @@ export const translations = {
           category: "AI & Deep Learning",
           tagCategory: "AI",
           period: "Apr 2026 - July 2026",
-          description: "Merancang arsitektur Deep Learning PyTorch (Multi-Branch CNN & BiLSTM-MHA) dengan fusi Wav2Vec 2.0 dan Explainable AI (SHAP) untuk deteksi depresi klinis berbasis suara.",
-          fullDescription: "Merancang dan mengimplementasikan arsitektur Deep Learning PyTorch (Multi-Branch 1D/2D CNN & BiLSTM-MHA) untuk deteksi depresi berbasis suara menggunakan dataset DAIC-WOZ (189 partisipan) di bawah 5-Fold Stratified Cross-Validation ketat. Mengintegrasikan representasi self-supervised pre-trained (Wav2Vec 2.0 embedding 768 dimensi) dengan Mel-Spectrogram dan MFCC 120 dimensi ke dalam multi-modal deep feature fusion head. Mengatasi ketidakseimbangan kelas ekstrem (rasio 2.3:1) melalui custom optimizer AdamW, penjadwalan ReduceLROnPlateau, regularisasi dropout 0.4, dan penalti weighted Cross-Entropy Loss. Membangun pipeline Explainable AI (XAI) memanfaatkan SHAP GradientExplainer langsung pada lapisan fusi CNN. Menulis bersama (co-author) makalah riset berformat IEEE: 'A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection'.",
+          description:
+            "Merancang arsitektur Deep Learning PyTorch (Multi-Branch CNN & BiLSTM-MHA) dengan fusi Wav2Vec 2.0 dan Explainable AI (SHAP) untuk deteksi depresi klinis berbasis suara.",
+          fullDescription:
+            "Merancang dan mengimplementasikan arsitektur Deep Learning PyTorch (Multi-Branch 1D/2D CNN & BiLSTM-MHA) untuk deteksi depresi berbasis suara menggunakan dataset DAIC-WOZ (189 partisipan) di bawah 5-Fold Stratified Cross-Validation ketat. Mengintegrasikan representasi self-supervised pre-trained (Wav2Vec 2.0 embedding 768 dimensi) dengan Mel-Spectrogram dan MFCC 120 dimensi ke dalam multi-modal deep feature fusion head. Mengatasi ketidakseimbangan kelas ekstrem (rasio 2.3:1) melalui custom optimizer AdamW, penjadwalan ReduceLROnPlateau, regularisasi dropout 0.4, dan penalti weighted Cross-Entropy Loss. Membangun pipeline Explainable AI (XAI) memanfaatkan SHAP GradientExplainer langsung pada lapisan fusi CNN. Menulis bersama (co-author) makalah riset berformat IEEE: 'A Comparative Study of Audio Feature Representations and Fusion Methods Across Machine Learning and Deep Learning for Depression Detection'.",
           features: [
             "Arsitektur Multi-Branch 1D/2D CNN & BiLSTM-MHA Deep Learning di PyTorch",
             "Integrasi Pre-Trained Wav2Vec 2.0 (768 dimensi) dengan Mel-Spectrogram & MFCC (120 dimensi)",
@@ -579,8 +723,10 @@ export const translations = {
           category: "IoT & Hardware",
           tagCategory: "IoT",
           period: "Mar 2025 - Jun 2025",
-          description: "Merancang alat bantu navigasi tunanetra menggunakan mikrokontroler ESP32, sensor ultrasonik, sensor kemiringan (tilt), alarm buzzer, dan platform Blynk.io.",
-          fullDescription: "Merancang alat bantu navigasi untuk penyandang tunanetra menggunakan mikrokontroler ESP32 untuk meningkatkan keselamatan dan mobilitas pengguna. Mengintegrasikan sensor ultrasonik untuk deteksi rintangan/halangan, sensor kemiringan (tilt) untuk pemantauan keseimbangan, dan sistem alarm buzzer. Mengembangkan logika perangkat menggunakan C++ dan mengintegrasikannya dengan platform Blynk.io untuk fungsionalitas pemantauan.",
+          description:
+            "Merancang alat bantu navigasi tunanetra menggunakan mikrokontroler ESP32, sensor ultrasonik, sensor kemiringan (tilt), alarm buzzer, dan platform Blynk.io.",
+          fullDescription:
+            "Merancang alat bantu navigasi untuk penyandang tunanetra menggunakan mikrokontroler ESP32 untuk meningkatkan keselamatan dan mobilitas pengguna. Mengintegrasikan sensor ultrasonik untuk deteksi rintangan/halangan, sensor kemiringan (tilt) untuk pemantauan keseimbangan, dan sistem alarm buzzer. Mengembangkan logika perangkat menggunakan C++ dan mengintegrasikannya dengan platform Blynk.io untuk fungsionalitas pemantauan.",
           features: [
             "Alat Bantu Navigasi Tunanetra untuk Meningkatkan Keselamatan & Mobilitas Pengguna",
             "Pemrosesan Tertanam & Logika Mikrokontroler ESP32 Menggunakan C++",
@@ -598,8 +744,10 @@ export const translations = {
           category: "Pengembangan Web",
           tagCategory: "Web",
           period: "Mar 2025 - Jun 2025",
-          description: "Membangun platform informasi cryptocurrency yang menyediakan data real-time nama koin, nilai pasar, deskripsi, dan riwayat harga menggunakan React.js.",
-          fullDescription: "Membangun platform informasi cryptocurrency yang menyediakan data real-time tentang nama koin, nilai pasar, deskripsi, dan riwayat harga. Memimpin pengembangan front-end menggunakan React.js, JavaScript, dan CSS. Merancang dan mengimplementasikan antarmuka pengguna yang responsif untuk menyajikan data 50 koin teratas secara informatif.",
+          description:
+            "Membangun platform informasi cryptocurrency yang menyediakan data real-time nama koin, nilai pasar, deskripsi, dan riwayat harga menggunakan React.js.",
+          fullDescription:
+            "Membangun platform informasi cryptocurrency yang menyediakan data real-time tentang nama koin, nilai pasar, deskripsi, dan riwayat harga. Memimpin pengembangan front-end menggunakan React.js, JavaScript, dan CSS. Merancang dan mengimplementasikan antarmuka pengguna yang responsif untuk menyajikan data 50 koin teratas secara informatif.",
           features: [
             "Data Real-Time Nama Koin, Nilai Pasar, Deskripsi, dan Riwayat Harga",
             "Memimpin Pengembangan Front-End Menggunakan React.js, JavaScript, dan CSS",
@@ -616,8 +764,10 @@ export const translations = {
           category: "Data & Dashboard",
           tagCategory: "Data",
           period: "Jun 2025 - Sept 2025",
-          description: "Mengembangkan dan mengelola dashboard proyek menggunakan Google Looker Studio dan AppSheet untuk pemantauan proyek real-time dengan fokus pengawasan anggaran di PT LEN Industri.",
-          fullDescription: "Mengembangkan dan mengelola dashboard proyek menggunakan Google Looker Studio untuk pemantauan proyek real-time yang dinamis dengan fokus pengawasan anggaran di PT LEN Industri (Persero). Memanfaatkan AppSheet dan Looker untuk mengoptimalkan proses manajemen proyek selama masa magang. Menyiapkan berbagai dokumen proyek yang dibutuhkan untuk pelaporan manajemen.",
+          description:
+            "Mengembangkan dan mengelola dashboard proyek menggunakan Google Looker Studio dan AppSheet untuk pemantauan proyek real-time dengan fokus pengawasan anggaran di PT LEN Industri.",
+          fullDescription:
+            "Mengembangkan dan mengelola dashboard proyek menggunakan Google Looker Studio untuk pemantauan proyek real-time yang dinamis dengan fokus pengawasan anggaran di PT LEN Industri (Persero). Memanfaatkan AppSheet dan Looker untuk mengoptimalkan proses manajemen proyek selama masa magang. Menyiapkan berbagai dokumen proyek yang dibutuhkan untuk pelaporan manajemen.",
           features: [
             "Dashboard Proyek Dinamis Real-Time di Google Looker Studio",
             "Fokus Pengawasan Anggaran (Budget Oversight), Pelacakan Sumber Daya & Milestone",
@@ -633,49 +783,58 @@ export const translations = {
       badge: "KEAHLIAN TEKNIS & HARD SKILLS",
       title: "Hard Skills &",
       titleSpan: "Spesialisasi",
-      subtitle: "Ikhtisar komprehensif keahlian teknis, bahasa pemrograman, dan tools dari pendidikan akademik, riset, serta pengalaman industri.",
+      subtitle:
+        "Ikhtisar komprehensif keahlian teknis, bahasa pemrograman, dan tools dari pendidikan akademik, riset, serta pengalaman industri.",
     },
     // Certifications
     certs: {
       badge: "KREDENSIAL TERVERIFIKASI",
       title: "Lisensi &",
       titleSpan: "Sertifikasi",
-      subtitle: "Sertifikasi profesional dan kredensial resmi di bidang Deep Learning, Kecerdasan Buatan, Python, Data Science, dan SQL.",
+      subtitle:
+        "Sertifikasi profesional dan kredensial resmi di bidang Deep Learning, Kecerdasan Buatan, Python, Data Science, dan SQL.",
       list: [
         {
           title: "Deep Learning",
           issuer: "DeepLearning.AI",
           issueDate: "Agu 2026",
           validity: "Agu 2026",
-          description: "Arsitektur jaringan saraf mendalam, optimasi multi-layer, hyperparameter tuning, dan rekayasa deep learning terapan.",
+          description:
+            "Arsitektur jaringan saraf mendalam, optimasi multi-layer, hyperparameter tuning, dan rekayasa deep learning terapan.",
         },
         {
           title: "Learn the Basics of AI (Belajar Dasar AI)",
           issuer: "Dicoding Indonesia",
           issueDate: "Nov 2024",
           validity: "Nov 2024 - Nov 2027",
-          description: "Prinsip dasar Kecerdasan Buatan, alur kerja Machine Learning, dan implementasi sistem cerdas.",
+          description:
+            "Prinsip dasar Kecerdasan Buatan, alur kerja Machine Learning, dan implementasi sistem cerdas.",
         },
         {
-          title: "Getting Started with Python Programming (Memulai Pemrograman dengan Python)",
+          title:
+            "Getting Started with Python Programming (Memulai Pemrograman dengan Python)",
           issuer: "Dicoding Indonesia",
           issueDate: "Nov 2024",
           validity: "Nov 2024 - Nov 2027",
-          description: "Sintaks bahasa Python, konstruksi fungsional, pemrograman berorientasi objek (OOP), dan manipulasi data terstruktur.",
+          description:
+            "Sintaks bahasa Python, konstruksi fungsional, pemrograman berorientasi objek (OOP), dan manipulasi data terstruktur.",
         },
         {
-          title: "Learn the Basics of Data Science (Belajar Dasar Data Science)",
+          title:
+            "Learn the Basics of Data Science (Belajar Dasar Data Science)",
           issuer: "Dicoding Indonesia",
           issueDate: "Okt 2024",
           validity: "Okt 2024 - Okt 2027",
-          description: "Eksplorasi data, analisis statistik, rekayasa fitur, pra-pemrosesan data, dan pemecahan masalah analitis.",
+          description:
+            "Eksplorasi data, analisis statistik, rekayasa fitur, pra-pemrosesan data, dan pemecahan masalah analitis.",
         },
         {
           title: "Learn the Basics of Structured Query Language (SQL)",
           issuer: "Dicoding Indonesia",
           issueDate: "Okt 2024",
           validity: "Okt 2024 - Okt 2027",
-          description: "Arsitektur database relasional, kueri manipulasi data, fungsi agregasi, dan dasar manajemen basis data.",
+          description:
+            "Arsitektur database relasional, kueri manipulasi data, fungsi agregasi, dan dasar manajemen basis data.",
         },
       ],
     },
@@ -684,7 +843,8 @@ export const translations = {
       badge: "KOMUNIKASI & PERTANYAAN",
       title: "Hubungi",
       titleSpan: "Saya",
-      subtitle: "Terbuka untuk posisi rekayasa teknik, kolaborasi proyek, dan diskusi riset. Silakan kirimkan pesan.",
+      subtitle:
+        "Terbuka untuk posisi rekayasa teknik, kolaborasi proyek, dan diskusi riset. Silakan kirimkan pesan.",
       infoTitle: "Informasi Kontak",
       emailLabel: "Alamat Email",
       phoneLabel: "WhatsApp / Telepon Langsung",
@@ -694,7 +854,8 @@ export const translations = {
       affilVal: "S1 Teknik Telekomunikasi, Telkom University",
       socialTitle: "Jaringan Profesional",
       formTitle: "Kirim Pesan Langsung",
-      formSubtitle: "Isi formulir di bawah ini dan saya akan segera membalas pesan Anda.",
+      formSubtitle:
+        "Isi formulir di bawah ini dan saya akan segera membalas pesan Anda.",
       nameLabel: "Nama Lengkap Anda *",
       emailInputLabel: "Alamat Email *",
       subjectLabel: "Topik / Subjek Pesan *",
@@ -706,7 +867,8 @@ export const translations = {
       sendBtn: "Kirim Pesan",
       sending: "Mengirim Pesan...",
       successMsg: "✓ Terima kasih! Pesan Anda telah berhasil dikirim.",
-      errorMsg: "✕ Gagal mengirim pesan. Silakan hubungi langsung via email atau WhatsApp.",
+      errorMsg:
+        "✕ Gagal mengirim pesan. Silakan hubungi langsung via email atau WhatsApp.",
     },
     // Footer
     footer: {
