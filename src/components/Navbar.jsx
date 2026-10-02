@@ -47,7 +47,7 @@ const Navbar = ({ activeSection }) => {
             </div>
             <div className="flex flex-col">
               <span className="text-base font-bold text-slate-900 tracking-wide">
-                Raihan Thaffan uy
+                Raihan Thaffan
               </span>
               <span className="text-[11px] font-mono text-blue-600 font-semibold tracking-wider">
                 {t.nav.portfolio}
