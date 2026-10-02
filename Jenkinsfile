@@ -73,7 +73,19 @@ pipeline {
             steps {
                 sh 'docker compose -p portfolio_new up -d --build'
                 sh 'docker image prune -f'
-                sh 'docker exec portfolio-app wget -qO- http://localhost > /dev/null && echo "Web OK"'
+                sh '''
+                  for i in $(seq 1 15); do 
+                    if docker exec portfolio-app wget -qO- http://localhost > /dev/null 2>&1; then 
+                      echo "Web OK" 
+                      exit 0
+                    fi 
+                    sleep 2 
+                  done 
+                  echo "Web tidak merespons"
+                  docker logs --tail 30 portfolio-app 
+                  exit 1 
+                '''
+                
             }
         }
     }
