@@ -13,6 +13,7 @@ pipeline {
 
     environment {
         BUILDER_IMAGE = "portfolio-builder:${env.BUILD_NUMBER}"
+        SONAR_COMPOSE = "/home/ubuntu/sonarqube/docker-compose.yml"
     }
 
     stages {
@@ -31,13 +32,32 @@ pipeline {
         stage('Testing') {
             steps {
                 sh 'docker run --rm $BUILDER_IMAGE npm run lint'
+                sh '''
+                  docker rm -f cov-$BUILD_NUMBER || true
+                  docker run --name cov-$BUILD_NUMBER $BUILDER_IMAGE npm test
+                  rm -rf coverage
+                  docker cp cov-$BUILD_NUMBER:/app/coverage ./coverage
+                  docker rm -f cov-$BUILD_NUMBER
+                '''
             }
         }
 
         stage('Code Review') {
             steps {
-                // Sementara: cek kerentanan dependency. Diganti SonarQube nanti.
-                sh 'docker run --rm $BUILDER_IMAGE npm audit --audit-level=high || true'
+                withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+                    sh '''
+                      docker compose -f $SONAR_COMPOSE up -d
+                      for i in $(seq 1 60); do
+                        curl -s http://sonarqube:9000/api/system/status | grep -q '"status":"UP"' && break
+                        sleep 5
+                      done
+                      docker run --rm --network cinet \
+                        -e SONAR_HOST_URL=http://sonarqube:9000 \
+                        -e SONAR_TOKEN=$SONAR_TOKEN \
+                        -v "$WORKSPACE:/usr/src" \
+                        sonarsource/sonar-scanner-cli
+                    '''
+                }
             }
         }
 
@@ -61,6 +81,7 @@ pipeline {
 
     post {
         always {
+            sh 'docker compose -f $SONAR_COMPOSE stop || true'
             sh 'docker rmi $BUILDER_IMAGE || true'
         }
     }
