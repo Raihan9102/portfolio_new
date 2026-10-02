@@ -51,10 +51,9 @@ pipeline {
                         curl -s http://sonarqube:9000/api/system/status | grep -q '"status":"UP"' && break
                         sleep 5
                       done
-                      docker run --rm --network cinet \
+                        docker run --rm --network cinet --volumes-from jenkins -w "$WORKSPACE" \
                         -e SONAR_HOST_URL=http://sonarqube:9000 \
                         -e SONAR_TOKEN=$SONAR_TOKEN \
-                        -v "$WORKSPACE:/usr/src" \
                         sonarsource/sonar-scanner-cli
                     '''
                 }
