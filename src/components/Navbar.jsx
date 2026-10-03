@@ -105,7 +105,7 @@ const Navbar = ({ activeSection }) => {
             </div>
 
             <motion.a
-              href="/cv/cv_2026.pdf"
+              href="/cv/cv_2026_akhir.pdf"
               download="CV_Muhammad_Raihan_Thaffan_Hidayat.pdf"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
