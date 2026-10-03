@@ -1,11 +1,8 @@
 services:
-  portfolio:
+  web:
     build: .
+    image: portfolio-web:latest
     container_name: portfolio-app
     restart: unless-stopped
-    networks:
-      - web
-
-networks:
-  web:
-    external: true
+    ports:
+      - "80:80"
