@@ -361,7 +361,7 @@ export const translations = {
           title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
           issuer: "IDN.ID Training Center",
           issueDate: "Oct 2026",
-          validity: "Oct 2026 • 32 Hours",
+          validity: "Oct 2026",
           description:
             "Comprehensive 32-hour hands-on DevOps training: Git & GitHub SCM, containerization with Docker & Docker Compose, automated CI/CD pipelines with Jenkins, static code quality analysis with SonarQube, and service monitoring & metrics visualization with Prometheus and Grafana.",
         },
