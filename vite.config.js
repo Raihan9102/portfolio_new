@@ -10,6 +10,17 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: "./src/setupTests.js",
-    coverage: { reporter: ["lcov", "text"] },
+    coverage: {
+      reporter: ["lcov", "text"],
+      exclude: [
+        "node_modules/",
+        "dist/",
+        "coverage/",
+        "src/main.jsx",
+        "src/setupTests.js",
+        "src/components/BackgroundBlobs.jsx",
+        "**/*.test.{js,jsx}",
+      ],
+    },
   },
 });

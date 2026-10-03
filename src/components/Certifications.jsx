@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const certTags = [
+  ["DevOps", "CI/CD", "Docker", "Jenkins", "SonarQube", "Prometheus & Grafana"],
   ["Deep Learning", "Neural Networks", "AI"],
   ["Artificial Intelligence", "Machine Learning"],
   ["Python", "Programming", "OOP"],
@@ -10,7 +11,14 @@ const certTags = [
   ["SQL", "Relational Database", "MySQL"],
 ];
 
-const certBadges = ["DeepLearning.AI", "Dicoding Certified", "Dicoding Certified", "Dicoding Certified", "Dicoding Certified"];
+const certBadges = [
+  "IDN Certified",
+  "DeepLearning.AI",
+  "Dicoding Certified",
+  "Dicoding Certified",
+  "Dicoding Certified",
+  "Dicoding Certified",
+];
 
 const Certifications = () => {
   const { t } = useLanguage();
@@ -69,9 +77,17 @@ const Certifications = () => {
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1">
                   {cert.title}
                 </h3>
-                <p className="text-xs font-bold text-blue-600 mb-3">
+                <p className="text-xs font-bold text-blue-600 mb-2">
                   {cert.issuer}
                 </p>
+                {cert.credentialId && (
+                  <div className="mb-3">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      ID: {cert.credentialId}
+                    </span>
+                  </div>
+                )}
 
                 <p className="text-xs text-slate-600 leading-relaxed mb-4">
                   {cert.description}

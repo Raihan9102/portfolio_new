@@ -22,8 +22,8 @@ export const translations = {
       academic: "🎓 S1 Telecommunications Engineering",
       greeting: "Hi, I'm",
       specialization:
-        "Internet of Things (IoT) • Front-End Development • Deep Learning",
-      bio1: "Telecommunications Engineering graduate from Telkom University with strong interests in Internet of Things (IoT), Front-End Development, and Deep Learning.",
+        "DevOps & CI/CD • Internet of Things (IoT) • Front-End Development • Deep Learning",
+      bio1: "Telecommunications Engineering graduate from Telkom University with strong interests in DevOps & Cloud Infrastructure, Internet of Things (IoT), Front-End Development, and Deep Learning.",
       bio2: "Gained practical experience through laboratory assistantship and industry internships at PT LEN Industri and HUMIC Engineering. Adaptable, a collaborative team player, and ready to contribute professionally to the technology industry.",
       viewExperience: "View Experience & Work",
       downloadCV: "Download Formal CV",
@@ -34,10 +34,10 @@ export const translations = {
           label: "Featured Projects",
           sub: "Edge AI • IoT • Web • Data",
         },
-        certs: { label: "Certifications", sub: "DeepLearning.AI & Dicoding" },
+        certs: { label: "Certifications", sub: "IDN.ID, DeepLearning.AI & Dicoding" },
         specializations: {
           label: "Specializations",
-          sub: "IoT • Front-End • Deep Learning",
+          sub: "DevOps • IoT • Front-End • AI",
         },
       },
     },
@@ -355,8 +355,17 @@ export const translations = {
       title: "Licenses &",
       titleSpan: "Certifications",
       subtitle:
-        "Professional certifications and recognized credentials in Deep Learning, Artificial Intelligence, Python, Data Science, and SQL.",
+        "Professional certifications and recognized credentials in DevOps & CI/CD, Deep Learning, Artificial Intelligence, Python, Data Science, and SQL.",
       list: [
+        {
+          title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
+          issuer: "IDN.ID Training Center (PT Integrasi Daya Nusantara)",
+          issueDate: "Oct 2026",
+          validity: "Oct 2026 • 32 Hours",
+          credentialId: "CERT0716524390",
+          description:
+            "Comprehensive 32-hour hands-on DevOps training: Git & GitHub SCM, containerization with Docker & Docker Compose, automated CI/CD pipelines with Jenkins, static code quality analysis with SonarQube, and service monitoring & metrics visualization with Prometheus and Grafana.",
+        },
         {
           title: "Deep Learning",
           issuer: "DeepLearning.AI",
@@ -459,8 +468,8 @@ export const translations = {
       academic: "🎓 S1 Teknik Telekomunikasi - Telkom University",
       greeting: "Halo, Saya",
       specialization:
-        "Internet of Things (IoT) • Front-End Development • Deep Learning",
-      bio1: "Lulusan S1 Teknik Telekomunikasi dari Telkom University dengan minat mendalam pada Internet of Things (IoT), Front-End Development, dan Deep Learning.",
+        "DevOps & CI/CD • Internet of Things (IoT) • Front-End Development • Deep Learning",
+      bio1: "Lulusan S1 Teknik Telekomunikasi dari Telkom University dengan minat mendalam pada DevOps & Cloud Infrastructure, Internet of Things (IoT), Front-End Development, dan Deep Learning.",
       bio2: "Memperoleh pengalaman praktis melalui asisten laboratorium serta magang industri di PT LEN Industri dan HUMIC Engineering. Adaptif, komunikatif dalam kerja tim, dan siap berkontribusi secara profesional di industri teknologi.",
       viewExperience: "Lihat Pengalaman & Karya",
       downloadCV: "Unduh CV Formal",
@@ -471,10 +480,10 @@ export const translations = {
           label: "Proyek Unggulan",
           sub: "Edge AI • IoT • Web • Data",
         },
-        certs: { label: "Sertifikasi", sub: "DeepLearning.AI & Dicoding" },
+        certs: { label: "Sertifikasi", sub: "IDN.ID, DeepLearning.AI & Dicoding" },
         specializations: {
           label: "Bidang Fokus",
-          sub: "IoT • Front-End • Deep Learning",
+          sub: "DevOps • IoT • Front-End • AI",
         },
       },
     },
@@ -792,8 +801,17 @@ export const translations = {
       title: "Lisensi &",
       titleSpan: "Sertifikasi",
       subtitle:
-        "Sertifikasi profesional dan kredensial resmi di bidang Deep Learning, Kecerdasan Buatan, Python, Data Science, dan SQL.",
+        "Sertifikasi profesional dan kredensial resmi di bidang DevOps & CI/CD, Deep Learning, Kecerdasan Buatan, Python, Data Science, dan SQL.",
       list: [
+        {
+          title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
+          issuer: "IDN.ID Training Center (PT Integrasi Daya Nusantara)",
+          issueDate: "Okt 2026",
+          validity: "Okt 2026 • 32 Jam",
+          credentialId: "CERT0716524390",
+          description:
+            "Pelatihan praktis 32 jam DevOps: Git & GitHub, kontainerisasi dengan Docker & Docker Compose, otomatisasi pipeline CI/CD dengan Jenkins, analisis kualitas kode dengan SonarQube, serta monitoring & visualisasi dengan Prometheus dan Grafana.",
+        },
         {
           title: "Deep Learning",
           issuer: "DeepLearning.AI",

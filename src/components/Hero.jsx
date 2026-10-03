@@ -34,8 +34,8 @@ const Hero = () => {
   const quickStats = [
     { label: t.hero.stats.internships.label, value: "2", sub: t.hero.stats.internships.sub },
     { label: t.hero.stats.projects.label, value: "5+", sub: t.hero.stats.projects.sub },
-    { label: t.hero.stats.certs.label, value: "5+", sub: t.hero.stats.certs.sub },
-    { label: t.hero.stats.specializations.label, value: "3", sub: t.hero.stats.specializations.sub },
+    { label: t.hero.stats.certs.label, value: "6+", sub: t.hero.stats.certs.sub },
+    { label: t.hero.stats.specializations.label, value: "4", sub: t.hero.stats.specializations.sub },
   ];
 
   return (

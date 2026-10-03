@@ -82,11 +82,10 @@ const Projects = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
-                activeFilter === filter
-                  ? "bg-blue-600 text-white shadow-md shadow-blue-600/25 border border-blue-600"
-                  : "bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-blue-600"
-              }`}
+              className={`px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${activeFilter === filter
+                ? "bg-blue-600 text-white shadow-md shadow-blue-600/25 border border-blue-600"
+                : "bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-blue-600"
+                }`}
             >
               {proj.filters[filter]}
             </button>
@@ -170,7 +169,7 @@ const Projects = () => {
                     {proj.viewDetails}
                   </span>
 
-                  <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
+                  <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
                     {project.demoLink && (
                       <a
                         href={project.demoLink}
@@ -216,6 +215,7 @@ const Projects = () => {
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.95, y: 30 }}
                 onClick={(e) => e.stopPropagation()}
+                onKeyDown={(e) => e.stopPropagation()}
                 className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 shadow-2xl"
               >
                 {/* Modal Header Media */}

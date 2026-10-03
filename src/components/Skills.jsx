@@ -24,6 +24,20 @@ const Skills = () => {
       ],
     },
     {
+      category: "DevOps & Cloud Infrastructure",
+      icon: "⚡",
+      description: "CI/CD pipelines, containerization, static code analysis & system observability",
+      skills: [
+        { name: "Docker & Docker Compose", level: "Intermediate", desc: "Multi-stage Dockerfiles, container lifecycle, networking, volumes & orchestration" },
+        { name: "Jenkins (CI/CD)", level: "Intermediate", desc: "Declarative pipelines, automated unit testing, SCM triggers & delivery gates" },
+        { name: "SonarQube", level: "Intermediate", desc: "Automated static analysis, code coverage, security hotspots & quality gate thresholds" },
+        { name: "Prometheus", level: "Intermediate", desc: "Time-series system monitoring, service metrics scraping & alerting targets" },
+        { name: "Grafana", level: "Intermediate", desc: "Real-time metrics visualization, customized dashboard analytics & telemetry monitoring" },
+        { name: "Git & GitHub", level: "Advanced", desc: "Source code management, branching workflows, pull requests & conflict resolution" },
+        { name: "Linux & Bash Scripting", level: "Intermediate", desc: "Ubuntu server administration, shell automation, SSH tunneling & process control" },
+      ],
+    },
+    {
       category: "IoT Development & Sensor Integration",
       icon: "📡",
       description: "Microcontrollers, multi-sensor hardware integration, and IoT cloud platforms",
@@ -50,17 +64,16 @@ const Skills = () => {
       ],
     },
     {
-      category: "Networking, Data Analytics & Tools",
+      category: "Networking, Data Analytics & Databases",
       icon: "🛠️",
       description: "Network configuration, business analytics dashboards, databases & dev tools",
       skills: [
         { name: "Cisco Packet Tracer", level: "Basic / Familiar", desc: "Basic network topology configuration, IP routing & network simulation" },
         { name: "Google Looker Studio", level: "Intermediate", desc: "Dynamic interactive dashboards, budget oversight & executive analytics" },
         { name: "AppSheet", level: "Intermediate", desc: "No-code business process automation and data collection applications" },
-        { name: "Microsoft Excel", level: "Basic / Familiar", desc: "Data organization, spreadsheet modeling & basic formulas" },
         { name: "MySQL / SQL", level: "Basic / Familiar", desc: "Relational database querying, schema structuring & data management" },
         { name: "Firebase Realtime DB", level: "Intermediate", desc: "Serverless NoSQL real-time cloud data synchronization & auth" },
-        { name: "Git & GitHub", level: "Intermediate", desc: "Version control, branching, repository management & code collaboration" },
+        { name: "Microsoft Excel", level: "Basic / Familiar", desc: "Data organization, spreadsheet modeling & basic formulas" },
       ],
     },
   ];
@@ -96,7 +109,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: cIdx * 0.1 }}
-              className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm glass-card-hover flex flex-col justify-between"
+              className={`bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm glass-card-hover flex flex-col justify-between ${
+                cIdx === 4 ? "md:col-span-2" : ""
+              }`}
             >
               <div>
                 {/* Cluster Title */}
