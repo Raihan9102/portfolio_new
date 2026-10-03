@@ -1,7 +1,15 @@
 node_modules
 dist
+dist-ssr
+coverage
 .git
 .gitignore
-.env*
+.dockerignore
 Dockerfile
-.dockerignorecoverage
+docker-compose*.yml
+.env*
+!.env.example
+.vscode
+.idea
+*.md
+*.log

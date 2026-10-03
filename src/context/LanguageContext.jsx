@@ -362,7 +362,6 @@ export const translations = {
           issuer: "IDN.ID Training Center (PT Integrasi Daya Nusantara)",
           issueDate: "Oct 2026",
           validity: "Oct 2026 • 32 Hours",
-          credentialId: "CERT0716524390",
           description:
             "Comprehensive 32-hour hands-on DevOps training: Git & GitHub SCM, containerization with Docker & Docker Compose, automated CI/CD pipelines with Jenkins, static code quality analysis with SonarQube, and service monitoring & metrics visualization with Prometheus and Grafana.",
         },
@@ -808,7 +807,6 @@ export const translations = {
           issuer: "IDN.ID Training Center (PT Integrasi Daya Nusantara)",
           issueDate: "Okt 2026",
           validity: "Okt 2026 • 32 Jam",
-          credentialId: "CERT0716524390",
           description:
             "Pelatihan praktis 32 jam DevOps: Git & GitHub, kontainerisasi dengan Docker & Docker Compose, otomatisasi pipeline CI/CD dengan Jenkins, analisis kualitas kode dengan SonarQube, serta monitoring & visualisasi dengan Prometheus dan Grafana.",
         },
