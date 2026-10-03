@@ -806,7 +806,7 @@ export const translations = {
           title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
           issuer: "IDN.ID Training Center",
           issueDate: "Okt 2026",
-          validity: "Okt 2026 • 32 Jam",
+          validity: "Okt 2026",
           description:
             "Pelatihan praktis 32 jam DevOps: Git & GitHub, kontainerisasi dengan Docker & Docker Compose, otomatisasi pipeline CI/CD dengan Jenkins, analisis kualitas kode dengan SonarQube, serta monitoring & visualisasi dengan Prometheus dan Grafana.",
         },
