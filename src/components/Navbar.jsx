@@ -64,8 +64,8 @@ const Navbar = ({ activeSection }) => {
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`relative px-3.5 py-1.5 text-sm font-semibold transition-all rounded-lg ${isActive
-                      ? "text-blue-700 bg-blue-50 border border-blue-200"
-                      : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                    ? "text-blue-700 bg-blue-50 border border-blue-200"
+                    : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
                     }`}
                 >
                   {item.label}
@@ -87,8 +87,8 @@ const Navbar = ({ activeSection }) => {
               <button
                 onClick={() => setLang("en")}
                 className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "en"
-                    ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
-                    : "text-slate-500 hover:text-slate-700"
+                  ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
+                  : "text-slate-500 hover:text-slate-700"
                   }`}
               >
                 EN
@@ -96,8 +96,8 @@ const Navbar = ({ activeSection }) => {
               <button
                 onClick={() => setLang("id")}
                 className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "id"
-                    ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
-                    : "text-slate-500 hover:text-slate-700"
+                  ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
+                  : "text-slate-500 hover:text-slate-700"
                   }`}
               >
                 ID
@@ -173,8 +173,8 @@ const Navbar = ({ activeSection }) => {
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${activeSection === item.id
-                      ? "bg-blue-50 text-blue-700 border border-blue-200"
-                      : "text-slate-600 hover:bg-slate-50 hover:text-blue-600"
+                    ? "bg-blue-50 text-blue-700 border border-blue-200"
+                    : "text-slate-600 hover:bg-slate-50 hover:text-blue-600"
                     }`}
                 >
                   {item.label}
@@ -188,8 +188,8 @@ const Navbar = ({ activeSection }) => {
                 <button
                   onClick={() => setLang("en")}
                   className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "en"
-                      ? "bg-blue-600 text-white"
-                      : "bg-slate-100 text-slate-500"
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-100 text-slate-500"
                     }`}
                 >
                   EN
@@ -197,8 +197,8 @@ const Navbar = ({ activeSection }) => {
                 <button
                   onClick={() => setLang("id")}
                   className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "id"
-                      ? "bg-blue-600 text-white"
-                      : "bg-slate-100 text-slate-500"
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-100 text-slate-500"
                     }`}
                 >
                   ID
