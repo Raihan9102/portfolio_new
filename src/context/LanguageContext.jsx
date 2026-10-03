@@ -34,7 +34,7 @@ export const translations = {
           label: "Featured Projects",
           sub: "Edge AI • IoT • Web • Data",
         },
-        certs: { label: "Certifications", sub: "IDN.ID, DeepLearning.AI & Dicoding" },
+        certs: { label: "Certifications", sub: "DeepLearning.AI & Dicoding" },
         specializations: {
           label: "Specializations",
           sub: "DevOps • IoT • Front-End • AI",
@@ -358,14 +358,6 @@ export const translations = {
         "Professional certifications and recognized credentials in DevOps & CI/CD, Deep Learning, Artificial Intelligence, Python, Data Science, and SQL.",
       list: [
         {
-          title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
-          issuer: "IDN.ID Training Center",
-          issueDate: "Oct 2026",
-          validity: "Oct 2026 • 32 Hours",
-          description:
-            "Comprehensive 32-hour hands-on DevOps training: Git & GitHub SCM, containerization with Docker & Docker Compose, automated CI/CD pipelines with Jenkins, static code quality analysis with SonarQube, and service monitoring & metrics visualization with Prometheus and Grafana.",
-        },
-        {
           title: "Deep Learning",
           issuer: "DeepLearning.AI",
           issueDate: "Aug 2026",
@@ -479,7 +471,7 @@ export const translations = {
           label: "Proyek Unggulan",
           sub: "Edge AI • IoT • Web • Data",
         },
-        certs: { label: "Sertifikasi", sub: "IDN.ID, DeepLearning.AI & Dicoding" },
+        certs: { label: "Sertifikasi", sub: "DeepLearning.AI & Dicoding" },
         specializations: {
           label: "Bidang Fokus",
           sub: "DevOps • IoT • Front-End • AI",
@@ -802,14 +794,6 @@ export const translations = {
       subtitle:
         "Sertifikasi profesional dan kredensial resmi di bidang DevOps & CI/CD, Deep Learning, Kecerdasan Buatan, Python, Data Science, dan SQL.",
       list: [
-        {
-          title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
-          issuer: "IDN.ID Training Center",
-          issueDate: "Okt 2026",
-          validity: "Okt 2026 • 32 Jam",
-          description:
-            "Pelatihan praktis 32 jam DevOps: Git & GitHub, kontainerisasi dengan Docker & Docker Compose, otomatisasi pipeline CI/CD dengan Jenkins, analisis kualitas kode dengan SonarQube, serta monitoring & visualisasi dengan Prometheus dan Grafana.",
-        },
         {
           title: "Deep Learning",
           issuer: "DeepLearning.AI",

@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const certTags = [
-  ["DevOps", "CI/CD", "Docker", "Jenkins", "SonarQube", "Prometheus & Grafana"],
   ["Deep Learning", "Neural Networks", "AI"],
   ["Artificial Intelligence", "Machine Learning"],
   ["Python", "Programming", "OOP"],
@@ -12,7 +11,6 @@ const certTags = [
 ];
 
 const certBadges = [
-  "IDN Certified",
   "DeepLearning.AI",
   "Dicoding Certified",
   "Dicoding Certified",
