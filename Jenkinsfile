@@ -75,7 +75,7 @@ pipeline {
                 sh 'docker image prune -f'
                 sh '''
                   for i in $(seq 1 15); do 
-                    if docker exec portfolio-app wget -qO- http://localhost > /dev/null 2>&1; then 
+                    if docker exec portfolio-app wget -qO- http://127.0.0.1 > /dev/null 2>&1; then 
                       echo "Web OK" 
                       exit 0
                     fi 
