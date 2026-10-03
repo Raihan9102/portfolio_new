@@ -44,7 +44,7 @@ const Contact = () => {
         throw new Error("Failed to send");
       }
     } catch (error) {
-      console.error(error);
+      console.error("Failed to send message:", error.message);
       setFormStatus("error");
       setTimeout(() => setFormStatus(null), 4000);
     }
