@@ -15,8 +15,13 @@ const BackgroundBlobs = () => {
 
       {/* Top Left Soft Blue Ambient Glow */}
       <motion.div
-        className="absolute w-[550px] h-[550px] bg-blue-400/10 rounded-full blur-[130px]"
-        style={{ top: "-10%", left: "-10%" }}
+        className="absolute w-[550px] h-[550px] rounded-full pointer-events-none"
+        style={{
+          top: "-10%",
+          left: "-10%",
+          background: "radial-gradient(circle, rgba(96, 165, 250, 0.16) 0%, rgba(96, 165, 250, 0.05) 50%, transparent 70%)",
+          willChange: "transform",
+        }}
         animate={{
           x: [0, 30, 0],
           y: [0, 25, 0],
@@ -31,8 +36,13 @@ const BackgroundBlobs = () => {
 
       {/* Right Tech Soft Sky Ambient Glow */}
       <motion.div
-        className="absolute w-[500px] h-[500px] bg-sky-300/15 rounded-full blur-[140px]"
-        style={{ top: "30%", right: "-10%" }}
+        className="absolute w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          top: "30%",
+          right: "-10%",
+          background: "radial-gradient(circle, rgba(125, 211, 252, 0.22) 0%, rgba(125, 211, 252, 0.06) 50%, transparent 70%)",
+          willChange: "transform",
+        }}
         animate={{
           x: [0, -30, 0],
           y: [0, 30, 0],
@@ -48,8 +58,13 @@ const BackgroundBlobs = () => {
 
       {/* Bottom Subtle Soft Blue Glow */}
       <motion.div
-        className="absolute w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-[150px]"
-        style={{ bottom: "-10%", left: "20%" }}
+        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none"
+        style={{
+          bottom: "-10%",
+          left: "20%",
+          background: "radial-gradient(circle, rgba(59, 130, 246, 0.14) 0%, rgba(59, 130, 246, 0.04) 50%, transparent 70%)",
+          willChange: "transform",
+        }}
         animate={{
           x: [0, 20, 0],
           y: [0, -20, 0],

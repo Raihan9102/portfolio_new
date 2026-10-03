@@ -15,22 +15,35 @@ const AppContent = () => {
   const { t } = useLanguage();
 
   useEffect(() => {
+    let ticking = false;
+    let rafId = null;
+
     const handleScroll = () => {
-      const sections = ["home", "about", "experience", "projects", "skills", "certifications", "contact"];
-      const scrollPosition = window.scrollY + 200;
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+      if (!ticking) {
+        rafId = window.requestAnimationFrame(() => {
+          const sections = ["home", "about", "experience", "projects", "skills", "certifications", "contact"];
+          const scrollPosition = window.scrollY + 200;
+          for (const section of sections) {
+            const element = document.getElementById(section);
+            if (element) {
+              const { offsetTop, offsetHeight } = element;
+              if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                setActiveSection(section);
+                break;
+              }
+            }
           }
-        }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) window.cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
