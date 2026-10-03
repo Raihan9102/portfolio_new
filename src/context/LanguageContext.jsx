@@ -359,7 +359,7 @@ export const translations = {
       list: [
         {
           title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
-          issuer: "IDN.ID Training Center (PT Integrasi Daya Nusantara)",
+          issuer: "IDN.ID Training Center",
           issueDate: "Oct 2026",
           validity: "Oct 2026 • 32 Hours",
           description:
@@ -804,7 +804,7 @@ export const translations = {
       list: [
         {
           title: "DEVOPS Training (CI/CD, Docker, Jenkins & Monitoring)",
-          issuer: "IDN.ID Training Center (PT Integrasi Daya Nusantara)",
+          issuer: "IDN.ID Training Center",
           issueDate: "Okt 2026",
           validity: "Okt 2026 • 32 Jam",
           description:
