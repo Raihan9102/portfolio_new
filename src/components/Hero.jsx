@@ -26,16 +26,33 @@ const Hero = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       const yOffset = -80;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
   const quickStats = [
-    { label: t.hero.stats.internships.label, value: "2", sub: t.hero.stats.internships.sub },
-    { label: t.hero.stats.projects.label, value: "5+", sub: t.hero.stats.projects.sub },
-    { label: t.hero.stats.certs.label, value: "6+", sub: t.hero.stats.certs.sub },
-    { label: t.hero.stats.specializations.label, value: "4", sub: t.hero.stats.specializations.sub },
+    {
+      label: t.hero.stats.internships.label,
+      value: "2",
+      sub: t.hero.stats.internships.sub,
+    },
+    {
+      label: t.hero.stats.projects.label,
+      value: "5+",
+      sub: t.hero.stats.projects.sub,
+    },
+    {
+      label: t.hero.stats.certs.label,
+      value: "6+",
+      sub: t.hero.stats.certs.sub,
+    },
+    {
+      label: t.hero.stats.specializations.label,
+      value: "4",
+      sub: t.hero.stats.specializations.sub,
+    },
   ];
 
   return (
@@ -128,18 +145,38 @@ const Hero = () => {
                 className="px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 transition-all flex items-center gap-2.5 text-sm"
               >
                 <span>{t.hero.viewExperience}</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
 
               <a
-                href="/cv/cv_2026.pdf"
+                href="/cv/cv_2026_akhir.pdf"
                 download="CV_Muhammad_Raihan_Thaffan_Hidayat.pdf"
                 className="px-6 py-3.5 bg-white rounded-xl font-bold text-slate-800 border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition-all flex items-center gap-2 text-sm shadow-sm"
               >
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <svg
+                  className="w-4 h-4 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
                 </svg>
                 {t.hero.downloadCV}
               </a>
