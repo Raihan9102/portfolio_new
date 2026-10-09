@@ -1,4 +1,4 @@
-# Customization Checklist ✅
+# Customization Checklist
 
 Use this checklist to track your customization progress.
 
@@ -18,32 +18,32 @@ Use this checklist to track your customization progress.
 
 ## Projects
 
-- [ ] Add Project 1 (Web)
-- [ ] Add Project 2 (IoT)
-- [ ] Add Project 3 (Web)
-- [ ] Add Project 4 (IoT)
+- [ ] Add Project 1
+- [ ] Add Project 2
+- [ ] Add Project 3
+- [ ] Add Project 4
 - [ ] Update project images (use real screenshots)
 - [ ] Update demo links
 - [ ] Update GitHub repository links
 
-## Contact & Social
+## Contact and Social
 
 - [ ] Update GitHub URL (`src/components/Contact.jsx` line 70)
 - [ ] Update LinkedIn URL (`src/components/Contact.jsx` line 79)
 - [ ] Update Twitter URL (`src/components/Contact.jsx` line 88)
-- [ ] Update email address (lines 97 & 214)
+- [ ] Update email address (lines 97 and 214)
 - [ ] Update location (`src/components/Contact.jsx` line 225)
 
 ## Files
 
-- [ ] Replace `public/cv_english.pdf` with your actual CV
+- [ ] Replace `public/cv/` with your actual CV
 - [ ] Add a favicon (optional)
 - [ ] Add your profile photo (optional)
 
 ## Deployment
 
 - [ ] Push code to GitHub
-- [ ] Deploy to Vercel/Netlify
+- [ ] Deploy to Vercel or Netlify
 - [ ] Test live website
 - [ ] Update social media links with live URL
 
@@ -56,6 +56,4 @@ Use this checklist to track your customization progress.
 - [ ] Enable PWA features
 - [ ] Add dark mode toggle
 
----
-
-**Tip**: Work through this checklist section by section. Start with Personal Information, then move to Skills, Projects, and finally Contact details.
+Tip: Work through this checklist section by section. Start with Personal Information, then move to Skills, Projects, and finally Contact details.

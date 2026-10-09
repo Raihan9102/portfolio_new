@@ -34,7 +34,7 @@ const Navbar = ({ activeSection }) => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4"
     >
-      <div className="max-w-7xl mx-auto bg-white/90 backdrop-blur-md rounded-2xl px-5 sm:px-7 py-3.5 border border-slate-200 shadow-md shadow-slate-200/50">
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl px-5 sm:px-7 py-3.5 border border-slate-200 shadow-sm">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div

@@ -88,8 +88,8 @@ const Hero = () => {
             className="lg:col-span-5 flex justify-center order-2 lg:order-1"
           >
             <div className="relative group max-w-[340px] sm:max-w-[380px] w-full">
-              {/* Outer Soft Blue Glow Ring */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-blue-400 to-sky-300 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500"></div>
+              {/* Outer Soft Teal Glow Ring */}
+              <div className="absolute -inset-2 bg-gradient-to-tr from-blue-400 to-blue-300 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500"></div>
 
               {/* Photo Container */}
               <div className="relative rounded-2xl overflow-hidden border-2 border-white bg-white shadow-2xl shadow-blue-900/10">

@@ -1,61 +1,54 @@
-**Built with ❤️ using React + Vite**
+# Portfolio Website
 
-# Interactive Portfolio Website 🚀
+Personal portfolio showcasing Muhammad Raihan Thaffan Hidayat's work in Telecommunications Engineering, specializing in Computer Vision, IoT Development, and Web Applications.
 
-A modern, interactive portfolio website built with React + Vite, featuring glassmorphism design, smooth animations, and project filtering capabilities.
+Built with React and Vite.
 
-![Portfolio Preview](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop)
-
-## ✨ Features
+## Features
 
 ### Completed Features
 
-- **🎨 Glassmorphism Design**: Modern UI with frosted glass effects and elegant transparency
-- **⚡ Smooth Animations**: Framer Motion powered animations for enhanced user experience
-- **📱 Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
-- **🔍 Project Filtering**: Filter projects by category (All/Web/IoT)
-- **💼 Project Modal**: Detailed project view with features, tech stack, and links
-- **🎯 Active Navigation**: Highlight current section while scrolling
-- **📊 Quick Stats**: Display key metrics in animated cards
-- **🛠️ Skills Showcase**: Interactive tech stack with tooltips
-- **📬 Contact Form**: Functional contact form with validation
-- **🌊 Animated Background**: Floating gradient blobs for visual depth
-- **⚡ Micro-interactions**: Hover effects, scale animations, and smooth transitions
+- Clean, responsive design optimized for all devices
+- Bilingual support (English/Indonesian)
+- Project filtering by category (AI, IoT, Web, Data)
+- Detailed project case studies with technical specifications
+- Interactive skill categorization with proficiency levels
+- Working contact form with validation
+- CV download functionality
+- Active navigation tracking
 
 ### Main Sections
 
-1. **Home/Hero** - Eye-catching introduction with CTA buttons
-2. **About** - Background, stats cards, and value proposition
-3. **Skills** - Categorized tech stack with level indicators
-4. **Projects** - Filterable project showcase (Web/IoT)
-5. **Contact** - Contact form and social media links
+1. Home - Professional introduction and key statistics
+2. About - Background, education, and core competencies
+3. Experience - Work history and internship details
+4. Projects - Portfolio of completed work
+5. Skills - Technical expertise across multiple domains
+6. Certifications - Professional credentials
+7. Contact - Get in touch
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
-- Node.js (v18+ recommended)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
 
-1. **Clone or download the project files**
+1. Clone or download the project files
 
-2. **Install dependencies**
-
+2. Install dependencies
    ```bash
    npm install
    ```
 
-3. **Start development server**
-
+3. Start development server
    ```bash
    npm run dev
    ```
 
-4. **Open browser**
-   - Navigate to `http://localhost:3000`
-   - The site should automatically open in your default browser
+4. Open browser at `http://localhost:3000`
 
 ### Build for Production
 
@@ -63,7 +56,7 @@ A modern, interactive portfolio website built with React + Vite, featuring glass
 npm run build
 ```
 
-This creates an optimized production build in the `dist/` folder.
+Creates optimized production build in `dist/` folder.
 
 ### Preview Production Build
 
@@ -71,24 +64,28 @@ This creates an optimized production build in the `dist/` folder.
 npm run preview
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-interactive-portfolio/
+portfolio/
 ├── public/
-│   └── cv_english.pdf          # Your CV file (add your own)
+│   └── cv/                     # CV files
 ├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx          # Navigation with active section tracking
-│   │   ├── Hero.jsx            # Hero section with CTA
-│   │   ├── About.jsx           # About section with stats
-│   │   ├── Skills.jsx          # Skills with tooltips
-│   │   ├── Projects.jsx        # Projects with filter & modal
-│   │   ├── Contact.jsx         # Contact form & social links
-│   │   └── BackgroundBlobs.jsx # Animated background
-│   ├── App.jsx                 # Main app component
-│   ├── main.jsx                # React entry point
-│   └── index.css               # Global styles
+│   ├── components/             # React components
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Certifications.jsx
+│   │   ├── Contact.jsx
+│   │   └── BackgroundBlobs.jsx
+│   ├── context/
+│   │   └── LanguageContext.jsx # i18n support
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
 ├── index.html
 ├── package.json
 ├── vite.config.js
@@ -96,128 +93,74 @@ interactive-portfolio/
 └── postcss.config.js
 ```
 
-## 🎨 Customization Guide
+## Customization Guide
 
-### 1. Personal Information
+### Personal Information
 
-**Hero Section** (`src/components/Hero.jsx`):
+Hero Section (`src/components/Hero.jsx` line 36):
+- Update your name
+- Update title and specialization (lines 42-44)
 
-```javascript
-// Line 36 - Update your name
-<span className="gradient-text">Your Name</span>
-
-// Line 42-44 - Update your title and focus
-A passionate Telecommunication Engineering student
-specializing in Web Development and Internet of Things (IoT)
-```
-
-**About Section** (`src/components/About.jsx`):
-
+About Section (`src/components/About.jsx`):
 - Update stats (lines 10-15)
 - Modify description paragraphs (lines 51-68)
 
-### 2. Skills
+### Skills
 
 Edit `src/components/Skills.jsx` (lines 8-60):
+- Add or remove skill categories
+- Update skill proficiency levels
+- Modify descriptions
 
-```javascript
-const skillCategories = [
-  {
-    category: "Frontend",
-    skills: [
-      { name: "React", level: "Advanced", description: "..." },
-      // Add/remove skills here
-    ],
-  },
-  // Add more categories
-];
-```
-
-### 3. Projects
+### Projects
 
 Edit `src/components/Projects.jsx` (lines 10-115):
+- Replace with your projects
+- Update images, descriptions, tech stacks
+- Add demo and GitHub links
 
-```javascript
-const projects = [
-  {
-    id: 1,
-    title: "Your Project",
-    category: "Web", // or 'IoT'
-    description: "Short description",
-    fullDescription: "Detailed description",
-    image: "https://your-image-url.com",
-    tech: ["React", "Node.js"],
-    demoLink: "https://demo.com",
-    githubLink: "https://github.com/...",
-    features: ["Feature 1", "Feature 2"],
-  },
-];
-```
-
-### 4. Contact & Social Links
+### Contact and Social Links
 
 Edit `src/components/Contact.jsx` (lines 47-82):
+- Update social media URLs
+- Change email and location (lines 208-235)
 
-```javascript
-const socialLinks = [
-  {
-    name: "GitHub",
-    url: "https://github.com/yourusername",
-    // ...
-  },
-];
-```
+### Color Scheme
 
-Update email and location (lines 208-235).
+Edit `tailwind.config.js` to customize colors.
 
-### 5. Color Scheme
+Edit `src/index.css` for global style modifications.
 
-Edit `tailwind.config.js` to change colors:
+### CV File
 
-```javascript
-extend: {
-  colors: {
-    'glass': 'rgba(255, 255, 255, 0.1)',
-    // Add custom colors
-  },
-}
-```
+Add your CV to `public/cv/` and update the link in `src/components/Hero.jsx` (line 73).
 
-Or modify gradient colors in `src/index.css` (line 28).
+## Deployment
 
-### 6. CV File
-
-1. Add your CV to `public/cv_english.pdf`
-2. Or update the link in `src/components/Hero.jsx` (line 73)
-
-## 🌐 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Vercel auto-detects Vite settings
-5. Click "Deploy"
-
-### Deploy to Netlify
+### Vercel (Recommended)
 
 1. Push code to GitHub
-2. Go to [netlify.com](https://netlify.com)
-3. "New site from Git"
+2. Go to vercel.com
+3. Import repository
+4. Vercel auto-detects Vite settings
+5. Deploy
+
+### Netlify
+
+1. Push code to GitHub
+2. Go to netlify.com
+3. Select "New site from Git"
 4. Build command: `npm run build`
 5. Publish directory: `dist`
 
-### Deploy to GitHub Pages
+### GitHub Pages
 
 1. Install gh-pages:
-
    ```bash
    npm install --save-dev gh-pages
    ```
 
 2. Update `package.json`:
-
    ```json
    {
      "homepage": "https://yourusername.github.io/repo-name",
@@ -229,7 +172,6 @@ Or modify gradient colors in `src/index.css` (line 28).
    ```
 
 3. Update `vite.config.js`:
-
    ```javascript
    export default defineConfig({
      plugins: [react()],
@@ -242,63 +184,29 @@ Or modify gradient colors in `src/index.css` (line 28).
    npm run deploy
    ```
 
-## 🛠️ Technologies Used
+## Technologies
 
-- **React 18** - UI library
-- **Vite** - Fast build tool
-- **Tailwind CSS** - Utility-first CSS
-- **Framer Motion** - Animation library
-- **Inter Font** - Modern typography
+- React 18 - UI library
+- Vite - Build tool
+- Tailwind CSS - Styling framework
+- Framer Motion - Animation library
+- Plus Jakarta Sans - Typography
 
-## 📝 Features Not Yet Implemented
+## Roadmap
 
-- Dark/Light mode toggle
-- Multi-language support (English/Indonesian)
-- Blog section
-- Experience/Timeline section
-- Certificate gallery
-- Testimonials section
+Planned enhancements:
+- Dark/light mode toggle
 - Backend integration for contact form
-- Search functionality for projects
-- Tag-based project filtering
+- Performance optimizations (image lazy loading, WebP format)
+- SEO improvements (meta tags, structured data)
+- Analytics integration
 
-## 🎯 Recommended Next Steps
+## License
 
-1. **Add Real Content**
-   - Replace placeholder images with your actual project screenshots
-   - Add your real CV file
-   - Update all social media links
+MIT License
 
-2. **Enhance SEO**
-   - Add meta tags and Open Graph images
-   - Create sitemap.xml
-   - Add structured data (JSON-LD)
+## Contact
 
-3. **Add Analytics**
-   - Integrate Google Analytics
-   - Set up conversion tracking
-
-4. **Performance Optimization**
-   - Optimize images (use WebP format)
-   - Implement lazy loading for images
-   - Add service worker for PWA
-
-5. **Additional Features**
-   - Add dark mode toggle
-   - Implement blog section
-   - Add testimonials slider
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Support
-
-For questions or support:
-
-- Email: your.email@example.com
-- GitHub: [Your GitHub](https://github.com/yourusername)
-
----
-
-**Built with ❤️ using React + Vite**
+Muhammad Raihan Thaffan Hidayat
+- Email: raihan.rahmat2019@gmail.com
+- GitHub: github.com/Raihan9102

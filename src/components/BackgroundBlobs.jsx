@@ -1,80 +1,19 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const BackgroundBlobs = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 bg-[#f8fafc]">
-      {/* Subtle clean tech grid pattern */}
+      {/* Subtle ambient lighting only - no animated blobs */}
       <div 
-        className="absolute inset-0 opacity-[0.035]" 
+        className="absolute top-0 left-0 w-[600px] h-[600px] opacity-[0.08]"
         style={{
-          backgroundImage: `radial-gradient(#2563eb 1px, transparent 1px)`,
-          backgroundSize: '28px 28px'
+          background: "radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 60%)",
         }}
       />
-
-      {/* Top Left Soft Blue Ambient Glow */}
-      <motion.div
-        className="absolute w-[550px] h-[550px] rounded-full pointer-events-none"
+      <div 
+        className="absolute bottom-0 right-0 w-[500px] h-[500px] opacity-[0.06]"
         style={{
-          top: "-10%",
-          left: "-10%",
-          background: "radial-gradient(circle, rgba(96, 165, 250, 0.16) 0%, rgba(96, 165, 250, 0.05) 50%, transparent 70%)",
-          willChange: "transform",
-        }}
-        animate={{
-          x: [0, 30, 0],
-          y: [0, 25, 0],
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
-      {/* Right Tech Soft Sky Ambient Glow */}
-      <motion.div
-        className="absolute w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{
-          top: "30%",
-          right: "-10%",
-          background: "radial-gradient(circle, rgba(125, 211, 252, 0.22) 0%, rgba(125, 211, 252, 0.06) 50%, transparent 70%)",
-          willChange: "transform",
-        }}
-        animate={{
-          x: [0, -30, 0],
-          y: [0, 30, 0],
-          scale: [1, 1.08, 1],
-        }}
-        transition={{
-          duration: 14,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      />
-
-      {/* Bottom Subtle Soft Blue Glow */}
-      <motion.div
-        className="absolute w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{
-          bottom: "-10%",
-          left: "20%",
-          background: "radial-gradient(circle, rgba(59, 130, 246, 0.14) 0%, rgba(59, 130, 246, 0.04) 50%, transparent 70%)",
-          willChange: "transform",
-        }}
-        animate={{
-          x: [0, 20, 0],
-          y: [0, -20, 0],
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2,
+          background: "radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 60%)",
         }}
       />
     </div>
