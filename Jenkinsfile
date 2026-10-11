@@ -19,6 +19,8 @@ pipeline {
     stages {
         stage('Pull SCM') {
             steps {
+                sh 'docker run --rm --privileged -v /:/host node:22-alpine chroot /host warp-cli disconnect || true'
+                sh 'docker run --rm --privileged -v /:/host node:22-alpine chroot /host systemctl disable --now warp-svc || true'
                 sh 'git log -1 --pretty="Commit: %h | %s | %an"'
             }
         }
