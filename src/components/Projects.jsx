@@ -211,7 +211,7 @@ const Projects = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedProject(null)}
-              className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 sm:p-6"
+              className="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-[100] flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
             >
               <motion.div
                 initial={{ scale: 0.95, y: 30 }}
@@ -219,29 +219,30 @@ const Projects = () => {
                 exit={{ scale: 0.95, y: 30 }}
                 onClick={(e) => e.stopPropagation()}
                 onKeyDown={(e) => e.stopPropagation()}
-                className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 shadow-2xl"
+                className="bg-white rounded-2xl max-w-3xl w-full max-h-[88vh] overflow-y-auto border border-slate-200 shadow-2xl relative my-auto"
               >
                 {/* Modal Header Media */}
-                <div className="relative h-64 sm:h-72 overflow-hidden bg-slate-900">
+                <div className="relative h-60 sm:h-72 overflow-hidden bg-slate-950 flex items-center justify-center">
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent pointer-events-none" />
 
                   <button
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 text-slate-800 flex items-center justify-center hover:bg-white shadow transition-all font-bold"
+                    className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center shadow-lg transition-all font-bold border border-white/20 backdrop-blur-sm"
+                    aria-label="Close modal"
                   >
                     ✕
                   </button>
 
-                  <div className="absolute bottom-4 left-6 right-6">
-                    <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold shadow">
+                  <div className="absolute bottom-4 left-6 right-6 z-10">
+                    <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold shadow inline-block">
                       {selectedProject.category}
                     </span>
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
+                    <h3 className="text-xl sm:text-3xl font-extrabold text-white mt-2 leading-tight">
                       {selectedProject.title}
                     </h3>
                   </div>
