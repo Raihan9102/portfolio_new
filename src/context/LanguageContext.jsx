@@ -339,6 +339,27 @@ export const translations = {
           ],
           badge: "Enterprise PMO",
         },
+        {
+          id: 6,
+          title: "MyPundi - Personal Finance & Budgeting Platform",
+          subtitle: "Full-Stack Finance Tracker with Multi-Account, OCR & CI/CD",
+          category: "Full-Stack Web & DevOps",
+          tagCategory: "Web",
+          period: "Sep 2026 - Present",
+          description:
+            "Engineered a production personal finance web platform featuring multi-account sync, AI OCR receipt scanner, budget limit warnings, and automated Jenkins CI/CD deployment.",
+          fullDescription:
+            "Engineered MyPundi, a full-stack personal finance web platform deployed live in production. Built with Next.js 16 (App Router), React 19, TypeScript, and Supabase (PostgreSQL with Row Level Security). Features real-time multi-account balance synchronization (Banks, E-Wallets, Cash), interactive monthly budget tracking, OCR receipt scanner for instant transaction recording, and automated financial insights powered by Google Gemini AI. Configured automated quality gates with SonarQube, end-to-end testing with Playwright & Vitest, and continuous deployment via Jenkins pipelines and Docker containers on an Ubuntu VPS.",
+          features: [
+            "Full-Stack Personal Finance Platform Built with Next.js 16 App Router & TypeScript",
+            "Multi-Account Architecture Supporting Banks (BCA, Mandiri), E-Wallets (GoPay), and Cash",
+            "Smart Insights Engine Powered by Google Gemini AI with Multi-Model Fallback",
+            "AI-Assisted Receipt Scanner (OCR) for Automated Instant Expense Ingestion",
+            "Production Automated CI/CD Pipeline Deployed via Jenkins, Docker & SonarQube Quality Gate",
+            "High-Security Standards Featuring MFA (TOTP 2FA), Screen PIN, Supabase RLS & CSV Export",
+          ],
+          badge: "Live Web App",
+        },
       ],
     },
     // Skills
@@ -783,6 +804,27 @@ export const translations = {
             "Penyusunan Berbagai Dokumen Proyek untuk Pelaporan Manajemen Eksekutif",
           ],
           badge: "Enterprise PMO",
+        },
+        {
+          id: 6,
+          title: "MyPundi - Platform Manajemen Keuangan Pribadi",
+          subtitle: "Aplikasi Finansial Full-Stack dengan Multi-Akun, OCR & CI/CD",
+          category: "Full-Stack Web & DevOps",
+          tagCategory: "Web",
+          period: "Sep 2026 - Sekarang",
+          description:
+            "Membangun platform manajemen keuangan pribadi full-stack dengan sinkronisasi multi-akun, scan struk belanja OCR, evaluasi anggaran, dan deployment otomatis via pipeline Jenkins CI/CD.",
+          fullDescription:
+            "Mengembangkan MyPundi, platform web pencatatan keuangan pribadi dan manajemen anggaran yang telah di-deploy ke lingkungan produksi. Dibangun menggunakan Next.js 16 (App Router), React 19, TypeScript, dan Supabase (PostgreSQL dengan Row Level Security). Dilengkapi sinkronisasi multi-akun (Bank, E-Wallet, Tunai), pelacakan pagu anggaran bulanan, OCR scanner struk belanja, dan asisten finansial cerdas berbasis AI Google Gemini. Dilengkapi pengujian otomatis komprehensif (Vitest & Playwright) serta pipeline CI/CD produksi otomatis menggunakan Jenkins, Docker, dan SonarQube quality gate pada server Ubuntu VPS.",
+          features: [
+            "Platform Manajemen Keuangan Pribadi Full-Stack Menggunakan Next.js 16 App Router & TypeScript",
+            "Arsitektur Multi-Akun Mendukung Rekening Bank (BCA, Mandiri), E-Wallet (GoPay), dan Kas Tunai",
+            "Smart Insights Engine Berbasis AI Google Gemini dengan Multi-Model Fallback untuk Pola Belanja",
+            "Optical Receipt Scanner (OCR) untuk Pencatatan Transaksi Otomatis Cukup dengan Foto Struk",
+            "Pipeline CI/CD Produksi Otomatis Menggunakan Jenkins, Docker Container & SonarQube Quality Gate",
+            "Standar Keamanan Tinggi dengan Otentikasi Dua Faktor (TOTP 2FA), PIN Layar, Supabase RLS & Ekspor CSV",
+          ],
+          badge: "Live Web App",
         },
       ],
     },

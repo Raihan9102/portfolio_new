@@ -40,7 +40,7 @@ const Hero = () => {
     },
     {
       label: t.hero.stats.projects.label,
-      value: "5+",
+      value: "6+",
       sub: t.hero.stats.projects.sub,
     },
     {

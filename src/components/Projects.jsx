@@ -9,6 +9,7 @@ const projectTech = [
   ["ESP32", "C++", "Arduino IDE", "Ultrasonic Sensor", "Tilt Sensor", "Buzzer Alert", "Blynk.io IoT Cloud", "Embedded Systems"],
   ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "CoinGecko API", "Node.js", "Postman", "Vercel"],
   ["Google Looker Studio", "AppSheet", "Project Management", "Budget Analytics", "Data Modeling", "Executive Reporting"],
+  ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Supabase", "Gemini AI", "Docker", "Jenkins CI/CD", "Playwright"],
 ];
 
 const projectImages = [
@@ -17,6 +18,7 @@ const projectImages = [
   "/asset/portfolio/alat_bantu_tunanetra.jpeg",
   "/asset/portfolio/cryptomania.png",
   "/asset/portfolio/pt_len_dashboard.png",
+  "/asset/portfolio/mypundi.png",
 ];
 
 const projectLinks = [
@@ -25,6 +27,7 @@ const projectLinks = [
   { demoLink: null, githubLink: "https://github.com/Raihan9102" },
   { demoLink: "https://cryptomania-app.vercel.app/", githubLink: "https://github.com/Raihan9102/crypto-mania" },
   { demoLink: null, githubLink: null },
+  { demoLink: "https://mypundi.my.id", githubLink: "https://github.com/Raihan9102/website-finance" },
 ];
 
 const Projects = () => {
