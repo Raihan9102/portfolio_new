@@ -27,7 +27,7 @@ const projectLinks = [
   { demoLink: null, githubLink: "https://github.com/Raihan9102" },
   { demoLink: "https://cryptomania-app.vercel.app/", githubLink: "https://github.com/Raihan9102/crypto-mania" },
   { demoLink: null, githubLink: null },
-  { demoLink: "https://mypundi.my.id", githubLink: "https://github.com/Raihan9102/website-finance" },
+  { demoLink: "https://mypundi.my.id", githubLink: null },
 ];
 
 const Projects = () => {
