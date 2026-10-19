@@ -161,7 +161,7 @@ const Hero = () => {
               </button>
 
               <a
-                href="/cv/cv_2026_akhir.pdf"
+                href="/cv/Muhammad Raihan Thaffan Hidayat_CV.pdf"
                 download="CV_Muhammad_Raihan_Thaffan_Hidayat.pdf"
                 className="px-6 py-3.5 bg-white rounded-xl font-bold text-slate-800 border border-slate-300 hover:border-blue-500 hover:text-blue-600 transition-all flex items-center gap-2 text-sm shadow-sm"
               >
