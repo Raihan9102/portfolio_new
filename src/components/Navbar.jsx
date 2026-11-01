@@ -63,11 +63,10 @@ const Navbar = ({ activeSection }) => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative px-3.5 py-1.5 text-sm font-semibold transition-all rounded-lg ${
-                    isActive
+                  className={`relative px-3.5 py-1.5 text-sm font-semibold transition-all rounded-lg ${isActive
                       ? "text-blue-700 bg-blue-50 border border-blue-200"
                       : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
-                  }`}
+                    }`}
                 >
                   {item.label}
                   {isActive && (
@@ -87,29 +86,27 @@ const Navbar = ({ activeSection }) => {
             <div className="flex items-center gap-1 bg-slate-100 border border-slate-200 rounded-xl p-1">
               <button
                 onClick={() => setLang("en")}
-                className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
-                  lang === "en"
+                className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "en"
                     ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
                     : "text-slate-500 hover:text-slate-700"
-                }`}
+                  }`}
               >
                 EN
               </button>
               <button
                 onClick={() => setLang("id")}
-                className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
-                  lang === "id"
+                className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "id"
                     ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
                     : "text-slate-500 hover:text-slate-700"
-                }`}
+                  }`}
               >
                 ID
               </button>
             </div>
 
             <motion.a
-              href="/cv/Muhammad Raihan Thaffan Hidayat_CV.pdf"
-              download="CV_Muhammad_Raihan_Thaffan_Hidayat.pdf"
+              href="/cv/Muhammad_Raihan_Thaffan_Hidayat_CV.pdf"
+              download="Muhammad_Raihan_Thaffan_Hidayat_CV.pdf"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="px-4 py-2 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md shadow-blue-600/25 transition-all flex items-center gap-2"
@@ -175,11 +172,10 @@ const Navbar = ({ activeSection }) => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
-                    activeSection === item.id
+                  className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${activeSection === item.id
                       ? "bg-blue-50 text-blue-700 border border-blue-200"
                       : "text-slate-600 hover:bg-slate-50 hover:text-blue-600"
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -191,29 +187,27 @@ const Navbar = ({ activeSection }) => {
                 </span>
                 <button
                   onClick={() => setLang("en")}
-                  className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
-                    lang === "en"
+                  className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "en"
                       ? "bg-blue-600 text-white"
                       : "bg-slate-100 text-slate-500"
-                  }`}
+                    }`}
                 >
                   EN
                 </button>
                 <button
                   onClick={() => setLang("id")}
-                  className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
-                    lang === "id"
+                  className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${lang === "id"
                       ? "bg-blue-600 text-white"
                       : "bg-slate-100 text-slate-500"
-                  }`}
+                    }`}
                 >
                   ID
                 </button>
               </div>
               <div className="pt-2">
                 <a
-                  href="/cv/cv_2026.pdf"
-                  download="CV_Muhammad_Raihan_Thaffan_Hidayat.pdf"
+                  href="/cv/Muhammad_Raihan_Thaffan_Hidayat_CV.pdf"
+                  download="Muhammad_Raihan_Thaffan_Hidayat_CV.pdf"
                   className="w-full flex items-center justify-center gap-2 py-2.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow"
                 >
                   📄 {t.nav.resume}
