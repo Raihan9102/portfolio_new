@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-app
+  Namespace: portfolio-production
+  labels:
+    app.kubernetes.io/name: portfolio
+    app.kubernetes.io/component: frontend
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: portfolio
+      app.kubernetes.io/component: frontend
+  template:
+    metadata:
+      labels:
+      app.kubernetes.io/name: portfolio
+      app.kubernetes.io/component: frontend
+    spec:
+      containers:
+        - name: portfolio
+          image: muhammadraihanthaffanh/portfolio:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            request:
+              cpu: 50m
+              memory: 64 Mi
+            limits:
+              cpu: 200m
+              memory: 128 Mi
+            livenessProbe:
+              httpGet:
+                path: /
+                port: http
+              initialDelaySeconds: 5
+              periodSeconds: 10
+            readinessProbe:
+              httpGet:
+                path: /
+                port: http
+              initialDelaySeconds: 3
+              periodSeconds: 5
