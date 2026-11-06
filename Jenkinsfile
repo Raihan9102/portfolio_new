@@ -13,6 +13,8 @@ pipeline {
 
     environment {
         BUILDER_IMAGE = "portfolio-builder:${env.BUILD_NUMBER}"
+        IMAGE         = "muhammadraihanthaffanh/portfolio"
+        TAG           = "${env.BUILD_NUMBER}"
         SONAR_COMPOSE = "/home/ubuntu/sonarqube/docker-compose.yml"
     }
 
@@ -25,7 +27,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build Builder') {
             steps {
                 sh 'docker build --target builder -t $BUILDER_IMAGE .'
             }
@@ -53,11 +55,23 @@ pipeline {
                         curl -s http://sonarqube:9000/api/system/status | grep -q '"status":"UP"' && break
                         sleep 5
                       done
-                        docker run --rm --network cinet --volumes-from jenkins -w "$WORKSPACE" \
+                      docker run --rm --network cinet --volumes-from jenkins -w "$WORKSPACE" \
                         -e SONAR_HOST_URL=http://sonarqube:9000 \
                         -e SONAR_TOKEN=$SONAR_TOKEN \
                         sonarsource/sonar-scanner-cli
                     '''
+                }
+            }
+        }
+
+        stage('Build & Push Image') {
+            steps {
+                sh 'docker build -t $IMAGE:$TAG -t $IMAGE:latest .'
+                withCredentials([usernamePassword(credentialsId: 'registry-cred',
+                    usernameVariable: 'REG_USER', passwordVariable: 'REG_PASS')]) {
+                    sh 'echo $REG_PASS | docker login -u $REG_USER --password-stdin'
+                    sh 'docker push $IMAGE:$TAG'
+                    sh 'docker push $IMAGE:latest'
                 }
             }
         }
@@ -71,23 +85,14 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy to Kubernetes') {
             steps {
-                sh 'docker compose -p portfolio_new up -d --build'
-                sh 'docker image prune -f'
-                sh '''
-                  for i in $(seq 1 15); do 
-                    if docker exec portfolio-app wget -qO- http://127.0.0.1 > /dev/null 2>&1; then 
-                      echo "Web OK" 
-                      exit 0
-                    fi 
-                    sleep 2 
-                  done 
-                  echo "Web tidak merespons"
-                  docker logs --tail 30 portfolio-app 
-                  exit 1 
-                '''
-                
+                sshagent(['vps-ssh']) {
+                    sh """
+                    ssh -o StrictHostKeyChecking=no ubuntu@43.173.15.95 \\
+                        "kubectl set image deployment/portfolio-app portfolio=\${IMAGE}:\${TAG} -n portfolio-production && kubectl rollout status deployment/portfolio-app -n portfolio-production"
+                    """
+                }
             }
         }
     }
@@ -96,6 +101,7 @@ pipeline {
         always {
             sh 'docker compose -f $SONAR_COMPOSE stop || true'
             sh 'docker rmi $BUILDER_IMAGE || true'
+            sh 'docker logout || true'
         }
     }
 }
